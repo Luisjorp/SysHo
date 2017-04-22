@@ -225,13 +225,21 @@ Public Class frmHabitaciones
     End Sub
 
     'Grupo Lista
+    Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
+        Dim report As New reporteHabitaciones()
+        Dim cnhab As New cnHabitacion
+        report.BindingSource1.DataSource = cnhab.RN_listarHabitaciones
+
+        Using printool As New ReportPrintTool(report)
+            printool.ShowPreviewDialog()
+        End Using
+    End Sub
     Private Sub btnCargarLista_Click(sender As Object, e As EventArgs) Handles btnCargarLista.Click
         SplashScreenManager.ShowForm(GetType(WaitForm1))
         With btnCargarLista
             .Enabled = False
         End With
         Timer1.Start()
-
     End Sub
     Private Sub txtBuscar_EditValueChanged(sender As Object, e As EventArgs) Handles txtBuscar.TextChanged
         Select Case btnDD_Filtro.Text
@@ -331,13 +339,5 @@ Public Class frmHabitaciones
         txtBuscar.Focus()
     End Sub
 
-    Private Sub SimpleButton1_Click(sender As Object, e As EventArgs) Handles SimpleButton1.Click
-        Dim report As New reporteHabitaciones()
-        Dim cnhab As New cnHabitacion
-        report.BindingSource1.DataSource = cnhab.RN_listarHabitaciones
 
-        Using printool As New ReportPrintTool(report)
-            printool.ShowPreviewDialog()
-        End Using
-    End Sub
 End Class

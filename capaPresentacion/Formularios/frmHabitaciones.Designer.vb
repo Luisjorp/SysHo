@@ -43,6 +43,7 @@ Partial Class frmHabitaciones
         Me.txtNoHabitacion = New DevExpress.XtraEditors.TextEdit()
         Me.txtidHabitacion = New DevExpress.XtraEditors.TextEdit()
         Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl()
+        Me.btnReporte = New DevExpress.XtraEditors.SimpleButton()
         Me.txtBuscar = New DevExpress.XtraEditors.SearchControl()
         Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
         Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
@@ -75,7 +76,6 @@ Partial Class frmHabitaciones
         Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.puMenu_gridHabitaciones = New DevExpress.XtraBars.PopupMenu(Me.components)
-        Me.SimpleButton1 = New DevExpress.XtraEditors.SimpleButton()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
         CType(Me.cboxTipoHabitacion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -322,7 +322,7 @@ Partial Class frmHabitaciones
         Me.GroupControl2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.GroupControl2.Controls.Add(Me.SimpleButton1)
+        Me.GroupControl2.Controls.Add(Me.btnReporte)
         Me.GroupControl2.Controls.Add(Me.txtBuscar)
         Me.GroupControl2.Controls.Add(Me.btnDD_Filtro)
         Me.GroupControl2.Controls.Add(Me.GridControl1)
@@ -330,9 +330,18 @@ Partial Class frmHabitaciones
         Me.GroupControl2.Controls.Add(Me.lblTotalRegistros)
         Me.GroupControl2.Location = New System.Drawing.Point(478, 47)
         Me.GroupControl2.Name = "GroupControl2"
-        Me.GroupControl2.Size = New System.Drawing.Size(505, 454)
+        Me.GroupControl2.Size = New System.Drawing.Size(596, 454)
         Me.GroupControl2.TabIndex = 4
         Me.GroupControl2.Text = "Listado de Habitaciones"
+        '
+        'btnReporte
+        '
+        Me.btnReporte.ImageUri.Uri = "Print;Size16x16"
+        Me.btnReporte.Location = New System.Drawing.Point(506, 46)
+        Me.btnReporte.Name = "btnReporte"
+        Me.btnReporte.Size = New System.Drawing.Size(85, 23)
+        Me.btnReporte.TabIndex = 11
+        Me.btnReporte.Text = "Reporte"
         '
         'txtBuscar
         '
@@ -361,7 +370,7 @@ Partial Class frmHabitaciones
         Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
         Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(995, 0)
+        Me.barDockControlTop.Size = New System.Drawing.Size(1086, 0)
         '
         'barDockControlBottom
         '
@@ -369,7 +378,7 @@ Partial Class frmHabitaciones
         Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
         Me.barDockControlBottom.Location = New System.Drawing.Point(0, 513)
         Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(995, 0)
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1086, 0)
         '
         'barDockControlLeft
         '
@@ -383,7 +392,7 @@ Partial Class frmHabitaciones
         '
         Me.barDockControlRight.CausesValidation = False
         Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(995, 0)
+        Me.barDockControlRight.Location = New System.Drawing.Point(1086, 0)
         Me.barDockControlRight.Manager = Me.BarManager1
         Me.barDockControlRight.Size = New System.Drawing.Size(0, 513)
         '
@@ -477,7 +486,7 @@ Partial Class frmHabitaciones
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.MenuManager = Me.BarManager1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(492, 284)
+        Me.GridControl1.Size = New System.Drawing.Size(583, 284)
         Me.GridControl1.TabIndex = 8
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
@@ -596,7 +605,7 @@ Partial Class frmHabitaciones
         Me.lblTotalRegistros.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.lblTotalRegistros.Appearance.Font = New System.Drawing.Font("Tahoma", 10.0!)
         Me.lblTotalRegistros.Appearance.Options.UseFont = True
-        Me.lblTotalRegistros.Location = New System.Drawing.Point(261, 415)
+        Me.lblTotalRegistros.Location = New System.Drawing.Point(352, 415)
         Me.lblTotalRegistros.Name = "lblTotalRegistros"
         Me.lblTotalRegistros.Size = New System.Drawing.Size(140, 16)
         Me.lblTotalRegistros.TabIndex = 4
@@ -612,19 +621,11 @@ Partial Class frmHabitaciones
         Me.puMenu_gridHabitaciones.Manager = Me.BarManager1
         Me.puMenu_gridHabitaciones.Name = "puMenu_gridHabitaciones"
         '
-        'SimpleButton1
-        '
-        Me.SimpleButton1.Location = New System.Drawing.Point(8, 79)
-        Me.SimpleButton1.Name = "SimpleButton1"
-        Me.SimpleButton1.Size = New System.Drawing.Size(75, 23)
-        Me.SimpleButton1.TabIndex = 11
-        Me.SimpleButton1.Text = "SimpleButton1"
-        '
         'frmHabitaciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(995, 513)
+        Me.ClientSize = New System.Drawing.Size(1086, 513)
         Me.Controls.Add(Me.GroupControl2)
         Me.Controls.Add(Me.GroupControl1)
         Me.Controls.Add(Me.LabelControl1)
@@ -714,5 +715,5 @@ Partial Class frmHabitaciones
     Friend WithEvents pu_btn_Piso As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents pu_btn_Numero As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents txtBuscar As DevExpress.XtraEditors.SearchControl
-    Friend WithEvents SimpleButton1 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnReporte As DevExpress.XtraEditors.SimpleButton
 End Class
