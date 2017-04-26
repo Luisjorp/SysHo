@@ -20,7 +20,7 @@ Partial Class WaitForm1
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.progressPanel1 = New DevExpress.XtraWaitForm.ProgressPanel()
         Me.tableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
@@ -41,7 +41,7 @@ Partial Class WaitForm1
         Me.progressPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.progressPanel1.ImageHorzOffset = 20
         Me.progressPanel1.Location = New System.Drawing.Point(0, 17)
-        Me.progressPanel1.LookAndFeel.SkinName = "Office 2013"
+        Me.progressPanel1.LookAndFeel.SkinName = "Office 2016 Dark"
         Me.progressPanel1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.progressPanel1.Margin = New System.Windows.Forms.Padding(0, 3, 0, 3)
         Me.progressPanel1.Name = "progressPanel1"
@@ -84,6 +84,6 @@ Partial Class WaitForm1
 
     End Sub
 
-    Private WithEvents progressPanel1 As DevExpress.XtraWaitForm.ProgressPanel
+    Public WithEvents progressPanel1 As DevExpress.XtraWaitForm.ProgressPanel
     Private WithEvents tableLayoutPanel1 As System.Windows.Forms.TableLayoutPanel
 End Class

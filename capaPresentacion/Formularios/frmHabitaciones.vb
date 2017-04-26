@@ -1,5 +1,4 @@
-﻿Imports System.Threading
-Imports capaEntidad
+﻿Imports capaEntidad
 Imports capaNegocios
 Imports DevExpress.XtraBars
 Imports DevExpress.XtraGrid.Views.Grid
@@ -153,7 +152,7 @@ Public Class frmHabitaciones
         End If
     End Sub
     '*************************************EVENTOS DE CONTROLES******************************
-    'Formulario Registro
+    'Grupo Registro
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         habilitarCampos()
         cargar_IDHabitacion()
@@ -301,7 +300,6 @@ Public Class frmHabitaciones
     End Sub
 
     'Pop Up Filtro Busqueda
-
     Private Sub pu_btn_Car_ItemClick(sender As Object, e As ItemClickEventArgs) Handles pu_btn_Car.ItemClick
         btnDD_Filtro.Text = "Características"
         GridView1.ActiveFilterString = String.Format("[caracteristicas] Like '%{0}%'", txtBuscar.Text)
@@ -338,6 +336,5 @@ Public Class frmHabitaciones
     Private Sub btnDD_Filtro_TextChanged(sender As Object, e As EventArgs) Handles btnDD_Filtro.TextChanged
         txtBuscar.Focus()
     End Sub
-
 
 End Class

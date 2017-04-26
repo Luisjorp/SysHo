@@ -112,6 +112,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\frmClientes.Designer.vb">
+      <DependentUpon>frmClientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmClientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\frmHabitaciones.Designer.vb">
       <DependentUpon>frmHabitaciones.vb</DependentUpon>
     </Compile>
@@ -159,6 +165,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Formularios\frmClientes.resx">
+      <DependentUpon>frmClientes.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmHabitaciones.resx">
       <DependentUpon>frmHabitaciones.vb</DependentUpon>
     </EmbeddedResource>
@@ -206,6 +215,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="001-hotel-1.ico" />
+    <None Include="Resources\16ayuda.png" />
+    <None Include="Resources\conf16.png" />
+    <None Include="Resources\16users.png" />
+    <None Include="Resources\conf162.png" />
+    <None Include="Resources\16consultas.png" />
+    <None Include="Resources\16pagos.png" />
+    <None Include="Resources\16clientes.png" />
+    <None Include="Resources\16reservas1.png" />
+    <None Include="Resources\16reservas.png" />
+    <None Include="Resources\16admon.png" />
+    <None Include="Resources\005-shop.png" />
+    <None Include="Resources\002-bed.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

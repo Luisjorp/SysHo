@@ -482,20 +482,23 @@ Partial Class frmHabitaciones
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.GridControl1.Location = New System.Drawing.Point(8, 109)
+        Me.GridControl1.LookAndFeel.SkinName = "Office 2007 Green"
         Me.GridControl1.LookAndFeel.UseDefaultLookAndFeel = False
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.MenuManager = Me.BarManager1
         Me.GridControl1.Name = "GridControl1"
-        Me.GridControl1.Size = New System.Drawing.Size(583, 284)
+        Me.GridControl1.Size = New System.Drawing.Size(583, 297)
         Me.GridControl1.TabIndex = 8
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
         '
-        Me.GridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.Gainsboro
+        Me.GridView1.Appearance.EvenRow.BackColor = System.Drawing.Color.MintCream
         Me.GridView1.Appearance.EvenRow.Options.UseBackColor = True
         Me.GridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.Moccasin
         Me.GridView1.Appearance.FocusedRow.Options.UseBackColor = True
+        Me.GridView1.Appearance.HeaderPanel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
+        Me.GridView1.Appearance.HeaderPanel.Options.UseFont = True
         Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.idHabitacion, Me.numero, Me.piso, Me.descripcion, Me.caracteristicas, Me.precioDiario, Me.estado, Me.tipoHabitacion})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.GroupPanelText = " "
@@ -593,8 +596,9 @@ Partial Class frmHabitaciones
         '
         'btnCargarLista
         '
+        Me.btnCargarLista.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.btnCargarLista.ImageUri.Uri = "CustomizeGrid;Size16x16;Office2013"
-        Me.btnCargarLista.Location = New System.Drawing.Point(8, 415)
+        Me.btnCargarLista.Location = New System.Drawing.Point(8, 412)
         Me.btnCargarLista.Name = "btnCargarLista"
         Me.btnCargarLista.Size = New System.Drawing.Size(115, 23)
         Me.btnCargarLista.TabIndex = 7
