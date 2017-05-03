@@ -70,6 +70,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cdCliente.vb" />
     <Compile Include="cdHabitacion.vb" />
     <Compile Include="cdProducto.vb" />
     <Compile Include="conexion.vb" />

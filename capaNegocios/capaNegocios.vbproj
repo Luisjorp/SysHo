@@ -61,6 +61,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="cnCliente.vb" />
     <Compile Include="cnHabitacion.vb" />
     <Compile Include="cnProducto.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />

@@ -24,7 +24,6 @@ Partial Class frmMain
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmMain))
         Me.RibbonControl = New DevExpress.XtraBars.Ribbon.RibbonControl()
         Me.BarButtonItem1 = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarEditItem1 = New DevExpress.XtraBars.BarEditItem()
         Me.RepositoryItemTimeEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit()
         Me.lblHora = New DevExpress.XtraBars.BarStaticItem()
         Me.BarButtonItem2 = New DevExpress.XtraBars.BarButtonItem()
@@ -63,9 +62,9 @@ Partial Class frmMain
         '
         Me.RibbonControl.ApplicationIcon = CType(resources.GetObject("RibbonControl.ApplicationIcon"), System.Drawing.Bitmap)
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.BarEditItem1, Me.lblHora, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem5, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.BarButtonItem1, Me.lblHora, Me.BarButtonItem2, Me.BarButtonItem3, Me.BarButtonItem4, Me.BarButtonItem5, Me.BarButtonItem6, Me.BarButtonItem7, Me.BarButtonItem8, Me.BarButtonItem9})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 16
+        Me.RibbonControl.MaxItemId = 18
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1, Me.RibbonPage2, Me.RibbonPage3, Me.RibbonPage4, Me.RibbonPage5})
         Me.RibbonControl.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemTimeEdit1})
@@ -80,14 +79,6 @@ Partial Class frmMain
         Me.BarButtonItem1.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.H))
         Me.BarButtonItem1.Name = "BarButtonItem1"
         '
-        'BarEditItem1
-        '
-        Me.BarEditItem1.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right
-        Me.BarEditItem1.Caption = "BarEditItem1"
-        Me.BarEditItem1.Edit = Me.RepositoryItemTimeEdit1
-        Me.BarEditItem1.Id = 4
-        Me.BarEditItem1.Name = "BarEditItem1"
-        '
         'RepositoryItemTimeEdit1
         '
         Me.RepositoryItemTimeEdit1.AutoHeight = False
@@ -100,7 +91,7 @@ Partial Class frmMain
         Me.lblHora.AllowRightClickInMenu = False
         Me.lblHora.Caption = "hora:"
         Me.lblHora.Id = 5
-        Me.lblHora.ImageOptions.ImageUri.Uri = "SwitchTimeScalesTo;Size16x16;Office2013"
+        Me.lblHora.ImageOptions.ImageUri.Uri = "SwitchTimeScalesTo;Size16x16;Colored"
         Me.lblHora.ItemAppearance.Normal.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.lblHora.ItemAppearance.Normal.Options.UseFont = True
         Me.lblHora.Name = "lblHora"
@@ -301,7 +292,6 @@ Partial Class frmMain
     Friend WithEvents RibbonStatusBar As DevExpress.XtraBars.Ribbon.RibbonStatusBar
     Friend WithEvents BarButtonItem1 As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents XtraTabbedMdiManager1 As DevExpress.XtraTabbedMdi.XtraTabbedMdiManager
-    Friend WithEvents BarEditItem1 As DevExpress.XtraBars.BarEditItem
     Friend WithEvents RepositoryItemTimeEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemTimeEdit
     Friend WithEvents DefaultLookAndFeel1 As DevExpress.LookAndFeel.DefaultLookAndFeel
     Friend WithEvents Timer1 As Timer

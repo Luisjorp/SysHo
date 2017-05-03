@@ -25,11 +25,11 @@ Public Class cdProducto
             Dim da As New SqlDataAdapter("sp_NextID_Producto", cn)
             da.SelectCommand.CommandType = CommandType.StoredProcedure
             cn.Open()
-            Dim idHabitacion$ = da.SelectCommand.ExecuteScalar() 'Obtiene solo el primer elemento de la primera columna y fila
+            Dim idCliente$ = da.SelectCommand.ExecuteScalar() 'Obtiene solo el primer elemento de la primera columna y fila
             cn.Close()
             'Retorna los 4 digitos de derecha a izquierda (suma 0 porque ya viene auto incremental y toma formato)
             'Return "H-" + (Right(idHabitacion, 4) + 0).ToString("0000")
-            Return idHabitacion
+            Return idCliente
         Catch ex As Exception
             MsgBox("Error>>> " + ex.Message, MsgBoxStyle.Critical, "Informe de Error")
             If cn.State = ConnectionState.Open Then cn.Close()

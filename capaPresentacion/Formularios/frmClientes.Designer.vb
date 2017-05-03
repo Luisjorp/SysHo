@@ -19,20 +19,23 @@ Partial Class frmClientes
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim SplashScreenManager1 As DevExpress.XtraSplashScreen.SplashScreenManager = New DevExpress.XtraSplashScreen.SplashScreenManager(Me, Nothing, True, False)
         Me.GroupControl2 = New DevExpress.XtraEditors.GroupControl()
         Me.btnReporte = New DevExpress.XtraEditors.SimpleButton()
         Me.txtBuscar = New DevExpress.XtraEditors.SearchControl()
         Me.btnDD_Filtro = New DevExpress.XtraEditors.DropDownButton()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
-        Me.idHabitacion = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.numero = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.piso = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.descripcion = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.caracteristicas = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.precioDiario = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.estado = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.tipoHabitacion = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.idPersona = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.nombre = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.apellido = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.tipoDocumento = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.noDocumento = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.direccion = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.telefono = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.email = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.codigoCliente = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.btnCargarLista = New DevExpress.XtraEditors.SimpleButton()
         Me.lblTotalRegistros = New DevExpress.XtraEditors.LabelControl()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
@@ -57,6 +60,25 @@ Partial Class frmClientes
         Me.txtIdPersona = New DevExpress.XtraEditors.TextEdit()
         Me.txtCodCliente = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
+        Me.puMenu_gridClientes = New DevExpress.XtraBars.PopupMenu(Me.components)
+        Me.pu_btn_Editar = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Eliminar = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
+        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
+        Me.pu_btn_Nom = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Ape = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Tipo = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Precio = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Estado = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Piso = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Numero = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Doc = New DevExpress.XtraBars.BarButtonItem()
+        Me.puMenu_btnDropDown_Filtro = New DevExpress.XtraBars.PopupMenu(Me.components)
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl2.SuspendLayout()
         CType(Me.txtBuscar.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,7 +95,15 @@ Partial Class frmClientes
         CType(Me.cboxTipoDocumento.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtIdPersona.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCodCliente.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.puMenu_gridClientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.puMenu_btnDropDown_Filtro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
+        '
+        'SplashScreenManager1
+        '
+        SplashScreenManager1.ClosingDelay = 500
         '
         'GroupControl2
         '
@@ -113,12 +143,13 @@ Partial Class frmClientes
         '
         'btnDD_Filtro
         '
+        Me.btnDD_Filtro.DropDownControl = Me.puMenu_btnDropDown_Filtro
         Me.btnDD_Filtro.ImageUri.Uri = "Filter;Size16x16;Office2013"
         Me.btnDD_Filtro.Location = New System.Drawing.Point(383, 46)
         Me.btnDD_Filtro.Name = "btnDD_Filtro"
         Me.btnDD_Filtro.Size = New System.Drawing.Size(117, 23)
         Me.btnDD_Filtro.TabIndex = 13
-        Me.btnDD_Filtro.Text = "Características"
+        Me.btnDD_Filtro.Text = "No. Documento"
         '
         'GridControl1
         '
@@ -139,7 +170,7 @@ Partial Class frmClientes
         Me.GridView1.Appearance.EvenRow.Options.UseBackColor = True
         Me.GridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.Moccasin
         Me.GridView1.Appearance.FocusedRow.Options.UseBackColor = True
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.idHabitacion, Me.numero, Me.piso, Me.descripcion, Me.caracteristicas, Me.precioDiario, Me.estado, Me.tipoHabitacion})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.idPersona, Me.nombre, Me.apellido, Me.tipoDocumento, Me.noDocumento, Me.direccion, Me.telefono, Me.email, Me.codigoCliente})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.GroupPanelText = " "
         Me.GridView1.Name = "GridView1"
@@ -155,84 +186,92 @@ Partial Class frmClientes
         Me.GridView1.OptionsView.EnableAppearanceEvenRow = True
         Me.GridView1.OptionsView.EnableAppearanceOddRow = True
         '
-        'idHabitacion
+        'idPersona
         '
-        Me.idHabitacion.Caption = "ID Habitacion"
-        Me.idHabitacion.FieldName = "idHabitacion"
-        Me.idHabitacion.Name = "idHabitacion"
-        Me.idHabitacion.OptionsColumn.AllowEdit = False
-        Me.idHabitacion.OptionsColumn.ReadOnly = True
-        Me.idHabitacion.Tag = "idhabitacion"
+        Me.idPersona.Caption = "ID Persona"
+        Me.idPersona.FieldName = "idPersona"
+        Me.idPersona.Name = "idPersona"
+        Me.idPersona.OptionsColumn.AllowEdit = False
+        Me.idPersona.OptionsColumn.ReadOnly = True
+        Me.idPersona.Tag = ""
         '
-        'numero
+        'nombre
         '
-        Me.numero.Caption = "Numero"
-        Me.numero.FieldName = "numero"
-        Me.numero.Name = "numero"
-        Me.numero.OptionsColumn.AllowEdit = False
-        Me.numero.OptionsColumn.ReadOnly = True
-        Me.numero.Visible = True
-        Me.numero.VisibleIndex = 0
+        Me.nombre.Caption = "Nombre"
+        Me.nombre.FieldName = "nombre"
+        Me.nombre.Name = "nombre"
+        Me.nombre.OptionsColumn.AllowEdit = False
+        Me.nombre.OptionsColumn.FixedWidth = True
+        Me.nombre.OptionsColumn.ReadOnly = True
+        Me.nombre.Visible = True
+        Me.nombre.VisibleIndex = 0
+        Me.nombre.Width = 72
         '
-        'piso
+        'apellido
         '
-        Me.piso.Caption = "Piso"
-        Me.piso.FieldName = "piso"
-        Me.piso.Name = "piso"
-        Me.piso.OptionsColumn.AllowEdit = False
-        Me.piso.OptionsColumn.ReadOnly = True
-        Me.piso.Visible = True
-        Me.piso.VisibleIndex = 1
+        Me.apellido.Caption = "Apellido"
+        Me.apellido.FieldName = "apellido"
+        Me.apellido.Name = "apellido"
+        Me.apellido.OptionsColumn.FixedWidth = True
+        Me.apellido.Visible = True
+        Me.apellido.VisibleIndex = 1
+        Me.apellido.Width = 72
         '
-        'descripcion
+        'tipoDocumento
         '
-        Me.descripcion.Caption = "Descripcion"
-        Me.descripcion.FieldName = "descripcion"
-        Me.descripcion.Name = "descripcion"
-        Me.descripcion.OptionsColumn.AllowEdit = False
-        Me.descripcion.OptionsColumn.ReadOnly = True
-        Me.descripcion.Visible = True
-        Me.descripcion.VisibleIndex = 2
+        Me.tipoDocumento.Caption = "Documento"
+        Me.tipoDocumento.FieldName = "tipoDocumento"
+        Me.tipoDocumento.Name = "tipoDocumento"
+        Me.tipoDocumento.Visible = True
+        Me.tipoDocumento.VisibleIndex = 2
+        Me.tipoDocumento.Width = 30
         '
-        'caracteristicas
+        'noDocumento
         '
-        Me.caracteristicas.Caption = "Características"
-        Me.caracteristicas.FieldName = "caracteristicas"
-        Me.caracteristicas.Name = "caracteristicas"
-        Me.caracteristicas.OptionsColumn.AllowEdit = False
-        Me.caracteristicas.OptionsColumn.ReadOnly = True
-        Me.caracteristicas.Visible = True
-        Me.caracteristicas.VisibleIndex = 3
+        Me.noDocumento.Caption = "No. Documento"
+        Me.noDocumento.FieldName = "noDocumento"
+        Me.noDocumento.Name = "noDocumento"
+        Me.noDocumento.Visible = True
+        Me.noDocumento.VisibleIndex = 3
+        Me.noDocumento.Width = 60
         '
-        'precioDiario
+        'direccion
         '
-        Me.precioDiario.Caption = "Precio Diario"
-        Me.precioDiario.FieldName = "precioDiario"
-        Me.precioDiario.Name = "precioDiario"
-        Me.precioDiario.OptionsColumn.AllowEdit = False
-        Me.precioDiario.OptionsColumn.ReadOnly = True
-        Me.precioDiario.Visible = True
-        Me.precioDiario.VisibleIndex = 4
+        Me.direccion.Caption = "Dirección"
+        Me.direccion.FieldName = "direccion"
+        Me.direccion.Name = "direccion"
+        Me.direccion.Visible = True
+        Me.direccion.VisibleIndex = 4
+        Me.direccion.Width = 130
         '
-        'estado
+        'telefono
         '
-        Me.estado.Caption = "Estado"
-        Me.estado.FieldName = "estado"
-        Me.estado.Name = "estado"
-        Me.estado.OptionsColumn.AllowEdit = False
-        Me.estado.OptionsColumn.ReadOnly = True
-        Me.estado.Visible = True
-        Me.estado.VisibleIndex = 5
+        Me.telefono.Caption = "Teléfono"
+        Me.telefono.FieldName = "telefono"
+        Me.telefono.Name = "telefono"
+        Me.telefono.OptionsColumn.FixedWidth = True
+        Me.telefono.Visible = True
+        Me.telefono.VisibleIndex = 5
+        Me.telefono.Width = 56
         '
-        'tipoHabitacion
+        'email
         '
-        Me.tipoHabitacion.Caption = "Tipo Habitación"
-        Me.tipoHabitacion.FieldName = "tipoHabitacion"
-        Me.tipoHabitacion.Name = "tipoHabitacion"
-        Me.tipoHabitacion.OptionsColumn.AllowEdit = False
-        Me.tipoHabitacion.OptionsColumn.ReadOnly = True
-        Me.tipoHabitacion.Visible = True
-        Me.tipoHabitacion.VisibleIndex = 6
+        Me.email.Caption = "Email"
+        Me.email.FieldName = "email"
+        Me.email.Name = "email"
+        Me.email.OptionsColumn.FixedWidth = True
+        Me.email.Visible = True
+        Me.email.VisibleIndex = 6
+        Me.email.Width = 117
+        '
+        'codigoCliente
+        '
+        Me.codigoCliente.Caption = "Código"
+        Me.codigoCliente.FieldName = "codigoCliente"
+        Me.codigoCliente.Name = "codigoCliente"
+        Me.codigoCliente.Visible = True
+        Me.codigoCliente.VisibleIndex = 7
+        Me.codigoCliente.Width = 30
         '
         'btnCargarLista
         '
@@ -461,6 +500,7 @@ Partial Class frmClientes
         'txtCodCliente
         '
         Me.txtCodCliente.EditValue = ""
+        Me.txtCodCliente.Enabled = False
         Me.txtCodCliente.Location = New System.Drawing.Point(401, 24)
         Me.txtCodCliente.Name = "txtCodCliente"
         Me.txtCodCliente.Properties.AppearanceReadOnly.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
@@ -481,6 +521,134 @@ Partial Class frmClientes
         Me.LabelControl1.TabIndex = 5
         Me.LabelControl1.Text = "Clientes"
         '
+        'Timer1
+        '
+        Me.Timer1.Interval = 1000
+        '
+        'puMenu_gridClientes
+        '
+        Me.puMenu_gridClientes.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Editar), New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Eliminar)})
+        Me.puMenu_gridClientes.Manager = Me.BarManager1
+        Me.puMenu_gridClientes.Name = "puMenu_gridClientes"
+        '
+        'pu_btn_Editar
+        '
+        Me.pu_btn_Editar.Caption = "Editar"
+        Me.pu_btn_Editar.Id = 0
+        Me.pu_btn_Editar.ImageOptions.ImageUri.Uri = "Edit;Size16x16;Colored"
+        Me.pu_btn_Editar.Name = "pu_btn_Editar"
+        '
+        'pu_btn_Eliminar
+        '
+        Me.pu_btn_Eliminar.Caption = "Eliminar"
+        Me.pu_btn_Eliminar.Id = 1
+        Me.pu_btn_Eliminar.ImageOptions.ImageUri.Uri = "Delete;Size16x16"
+        Me.pu_btn_Eliminar.Name = "pu_btn_Eliminar"
+        '
+        'BarManager1
+        '
+        Me.BarManager1.DockControls.Add(Me.barDockControlTop)
+        Me.BarManager1.DockControls.Add(Me.barDockControlBottom)
+        Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
+        Me.BarManager1.DockControls.Add(Me.barDockControlRight)
+        Me.BarManager1.Form = Me
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.pu_btn_Editar, Me.pu_btn_Eliminar, Me.pu_btn_Nom, Me.pu_btn_Ape, Me.pu_btn_Tipo, Me.pu_btn_Precio, Me.pu_btn_Estado, Me.pu_btn_Piso, Me.pu_btn_Numero, Me.pu_btn_Doc})
+        Me.BarManager1.MaxItemId = 16
+        '
+        'barDockControlTop
+        '
+        Me.barDockControlTop.CausesValidation = False
+        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlTop.Manager = Me.BarManager1
+        Me.barDockControlTop.Size = New System.Drawing.Size(1086, 0)
+        '
+        'barDockControlBottom
+        '
+        Me.barDockControlBottom.CausesValidation = False
+        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 513)
+        Me.barDockControlBottom.Manager = Me.BarManager1
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1086, 0)
+        '
+        'barDockControlLeft
+        '
+        Me.barDockControlLeft.CausesValidation = False
+        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlLeft.Manager = Me.BarManager1
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 513)
+        '
+        'barDockControlRight
+        '
+        Me.barDockControlRight.CausesValidation = False
+        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
+        Me.barDockControlRight.Location = New System.Drawing.Point(1086, 0)
+        Me.barDockControlRight.Manager = Me.BarManager1
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 513)
+        '
+        'pu_btn_Nom
+        '
+        Me.pu_btn_Nom.Caption = "Nombre"
+        Me.pu_btn_Nom.Id = 8
+        Me.pu_btn_Nom.ImageOptions.ImageUri.Uri = "AlignHorizontalTop;Size16x16"
+        Me.pu_btn_Nom.Name = "pu_btn_Nom"
+        '
+        'pu_btn_Ape
+        '
+        Me.pu_btn_Ape.Caption = "Apellido"
+        Me.pu_btn_Ape.Id = 9
+        Me.pu_btn_Ape.ImageOptions.ImageUri.Uri = "AlignHorizontalCenter;Size16x16"
+        Me.pu_btn_Ape.Name = "pu_btn_Ape"
+        '
+        'pu_btn_Tipo
+        '
+        Me.pu_btn_Tipo.Caption = "Tipo de Habitación"
+        Me.pu_btn_Tipo.Id = 10
+        Me.pu_btn_Tipo.ImageOptions.ImageUri.Uri = "ListBullets;Size16x16"
+        Me.pu_btn_Tipo.Name = "pu_btn_Tipo"
+        '
+        'pu_btn_Precio
+        '
+        Me.pu_btn_Precio.Caption = "Precio"
+        Me.pu_btn_Precio.Id = 11
+        Me.pu_btn_Precio.ImageOptions.ImageUri.Uri = "Currency;Size16x16"
+        Me.pu_btn_Precio.Name = "pu_btn_Precio"
+        '
+        'pu_btn_Estado
+        '
+        Me.pu_btn_Estado.Caption = "Estado"
+        Me.pu_btn_Estado.Id = 12
+        Me.pu_btn_Estado.ImageOptions.ImageUri.Uri = "Apply;Size16x16"
+        Me.pu_btn_Estado.Name = "pu_btn_Estado"
+        '
+        'pu_btn_Piso
+        '
+        Me.pu_btn_Piso.Caption = "Piso"
+        Me.pu_btn_Piso.Id = 13
+        Me.pu_btn_Piso.ImageOptions.ImageUri.Uri = "ListNumbers;Size16x16"
+        Me.pu_btn_Piso.Name = "pu_btn_Piso"
+        '
+        'pu_btn_Numero
+        '
+        Me.pu_btn_Numero.Caption = "No. Habitación"
+        Me.pu_btn_Numero.Id = 14
+        Me.pu_btn_Numero.ImageOptions.ImageUri.Uri = "Today;Size16x16"
+        Me.pu_btn_Numero.Name = "pu_btn_Numero"
+        '
+        'pu_btn_Doc
+        '
+        Me.pu_btn_Doc.Caption = "No. Documento"
+        Me.pu_btn_Doc.Id = 15
+        Me.pu_btn_Doc.ImageOptions.ImageUri.Uri = "Edit;Size16x16"
+        Me.pu_btn_Doc.Name = "pu_btn_Doc"
+        '
+        'puMenu_btnDropDown_Filtro
+        '
+        Me.puMenu_btnDropDown_Filtro.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Nom), New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Ape), New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Doc)})
+        Me.puMenu_btnDropDown_Filtro.Manager = Me.BarManager1
+        Me.puMenu_btnDropDown_Filtro.Name = "puMenu_btnDropDown_Filtro"
+        '
         'frmClientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -489,6 +657,10 @@ Partial Class frmClientes
         Me.Controls.Add(Me.GroupControl2)
         Me.Controls.Add(Me.GroupControl1)
         Me.Controls.Add(Me.LabelControl1)
+        Me.Controls.Add(Me.barDockControlLeft)
+        Me.Controls.Add(Me.barDockControlRight)
+        Me.Controls.Add(Me.barDockControlBottom)
+        Me.Controls.Add(Me.barDockControlTop)
         Me.Name = "frmClientes"
         Me.Text = "Registro de Clientes"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -510,6 +682,10 @@ Partial Class frmClientes
         CType(Me.cboxTipoDocumento.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtIdPersona.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCodCliente.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.puMenu_gridClientes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.puMenu_btnDropDown_Filtro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -521,14 +697,8 @@ Partial Class frmClientes
     Friend WithEvents btnDD_Filtro As DevExpress.XtraEditors.DropDownButton
     Friend WithEvents GridControl1 As DevExpress.XtraGrid.GridControl
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
-    Friend WithEvents idHabitacion As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents numero As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents piso As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents descripcion As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents caracteristicas As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents precioDiario As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents estado As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents tipoHabitacion As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents idPersona As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents nombre As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents btnCargarLista As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents lblTotalRegistros As DevExpress.XtraEditors.LabelControl
     Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
@@ -553,4 +723,30 @@ Partial Class frmClientes
     Friend WithEvents txtTelefono As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl6 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents txtDireccion As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents BehaviorManager1 As DevExpress.Utils.Behaviors.BehaviorManager
+    Friend WithEvents puMenu_gridClientes As DevExpress.XtraBars.PopupMenu
+    Friend WithEvents pu_btn_Editar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents pu_btn_Eliminar As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents BarManager1 As DevExpress.XtraBars.BarManager
+    Friend WithEvents barDockControlTop As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents barDockControlBottom As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents barDockControlLeft As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents barDockControlRight As DevExpress.XtraBars.BarDockControl
+    Friend WithEvents pu_btn_Nom As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents pu_btn_Ape As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents pu_btn_Tipo As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents pu_btn_Precio As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents pu_btn_Estado As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents pu_btn_Piso As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents pu_btn_Numero As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents puMenu_btnDropDown_Filtro As DevExpress.XtraBars.PopupMenu
+    Friend WithEvents apellido As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents tipoDocumento As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents noDocumento As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents direccion As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents telefono As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents email As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents codigoCliente As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents pu_btn_Doc As DevExpress.XtraBars.BarButtonItem
 End Class
