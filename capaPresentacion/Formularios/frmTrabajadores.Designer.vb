@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class frmClientes
+Partial Class frmTrabajadores
     Inherits DevExpress.XtraEditors.XtraForm
 
     'Form overrides dispose to clean up the component list.
@@ -25,22 +25,6 @@ Partial Class frmClientes
         Me.btnReporte = New DevExpress.XtraEditors.SimpleButton()
         Me.txtBuscar = New DevExpress.XtraEditors.SearchControl()
         Me.btnDD_Filtro = New DevExpress.XtraEditors.DropDownButton()
-        Me.puMenu_btnDropDown_Filtro = New DevExpress.XtraBars.PopupMenu(Me.components)
-        Me.pu_btn_Nom = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Ape = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Doc = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
-        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
-        Me.pu_btn_Editar = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Eliminar = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Tipo = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Precio = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Estado = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Piso = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Numero = New DevExpress.XtraBars.BarButtonItem()
         Me.GridControl1 = New DevExpress.XtraGrid.GridControl()
         Me.GridView1 = New DevExpress.XtraGrid.Views.Grid.GridView()
         Me.idPersona = New DevExpress.XtraGrid.Columns.GridColumn()
@@ -51,10 +35,25 @@ Partial Class frmClientes
         Me.direccion = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.telefono = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.email = New DevExpress.XtraGrid.Columns.GridColumn()
-        Me.codigoCliente = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.sueldo = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.acceso = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.login = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.password = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.estado = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.btnCargarLista = New DevExpress.XtraEditors.SimpleButton()
         Me.lblTotalRegistros = New DevExpress.XtraEditors.LabelControl()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
+        Me.cboxEstado = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.LabelControl13 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl12 = New DevExpress.XtraEditors.LabelControl()
+        Me.txtPassword = New DevExpress.XtraEditors.TextEdit()
+        Me.SeparatorControl1 = New DevExpress.XtraEditors.SeparatorControl()
+        Me.LabelControl11 = New DevExpress.XtraEditors.LabelControl()
+        Me.txtLogin = New DevExpress.XtraEditors.TextEdit()
+        Me.cboxAcceso = New DevExpress.XtraEditors.ComboBoxEdit()
+        Me.LabelControl10 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl9 = New DevExpress.XtraEditors.LabelControl()
+        Me.txtSueldo = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl8 = New DevExpress.XtraEditors.LabelControl()
         Me.txtEmail = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl7 = New DevExpress.XtraEditors.LabelControl()
@@ -67,27 +66,45 @@ Partial Class frmClientes
         Me.txtApellido = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
         Me.txtNombre = New DevExpress.XtraEditors.TextEdit()
-        Me.LabelControl9 = New DevExpress.XtraEditors.LabelControl()
         Me.btnCancelar = New DevExpress.XtraEditors.SimpleButton()
         Me.btnGuardar = New DevExpress.XtraEditors.SimpleButton()
         Me.btnNuevo = New DevExpress.XtraEditors.SimpleButton()
         Me.cboxTipoDocumento = New DevExpress.XtraEditors.ComboBoxEdit()
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
         Me.txtIdPersona = New DevExpress.XtraEditors.TextEdit()
-        Me.txtCodCliente = New DevExpress.XtraEditors.TextEdit()
         Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
         Me.puMenu_gridClientes = New DevExpress.XtraBars.PopupMenu(Me.components)
+        Me.pu_btn_Editar = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Eliminar = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
+        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
+        Me.pu_btn_Nom = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Ape = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Tipo = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Precio = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Estado = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Piso = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Numero = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Doc = New DevExpress.XtraBars.BarButtonItem()
+        Me.puMenu_btnDropDown_Filtro = New DevExpress.XtraBars.PopupMenu(Me.components)
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl2.SuspendLayout()
         CType(Me.txtBuscar.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.puMenu_btnDropDown_Filtro, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
+        CType(Me.cboxEstado.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SeparatorControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtLogin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboxAcceso.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtSueldo.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTelefono.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDireccion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -96,9 +113,10 @@ Partial Class frmClientes
         CType(Me.txtNombre.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboxTipoDocumento.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtIdPersona.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtCodCliente.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puMenu_gridClientes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.puMenu_btnDropDown_Filtro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplashScreenManager1
@@ -119,8 +137,8 @@ Partial Class frmClientes
         Me.GroupControl2.Location = New System.Drawing.Point(478, 47)
         Me.GroupControl2.Name = "GroupControl2"
         Me.GroupControl2.Size = New System.Drawing.Size(596, 454)
-        Me.GroupControl2.TabIndex = 7
-        Me.GroupControl2.Text = "Listado de Clientes"
+        Me.GroupControl2.TabIndex = 10
+        Me.GroupControl2.Text = "Listado de Trabajadores"
         '
         'btnReporte
         '
@@ -128,7 +146,7 @@ Partial Class frmClientes
         Me.btnReporte.Location = New System.Drawing.Point(506, 46)
         Me.btnReporte.Name = "btnReporte"
         Me.btnReporte.Size = New System.Drawing.Size(85, 23)
-        Me.btnReporte.TabIndex = 14
+        Me.btnReporte.TabIndex = 19
         Me.btnReporte.Text = "Reporte"
         '
         'txtBuscar
@@ -139,135 +157,16 @@ Partial Class frmClientes
         Me.txtBuscar.Properties.NullValuePrompt = "Escriba el texto a buscar de acuerdo al filtro establecido a la derecha..."
         Me.txtBuscar.Properties.ShowSearchButton = False
         Me.txtBuscar.Size = New System.Drawing.Size(369, 20)
-        Me.txtBuscar.TabIndex = 12
+        Me.txtBuscar.TabIndex = 17
         '
         'btnDD_Filtro
         '
-        Me.btnDD_Filtro.DropDownControl = Me.puMenu_btnDropDown_Filtro
         Me.btnDD_Filtro.ImageUri.Uri = "Filter;Size16x16;Office2013"
         Me.btnDD_Filtro.Location = New System.Drawing.Point(383, 46)
         Me.btnDD_Filtro.Name = "btnDD_Filtro"
         Me.btnDD_Filtro.Size = New System.Drawing.Size(117, 23)
-        Me.btnDD_Filtro.TabIndex = 13
+        Me.btnDD_Filtro.TabIndex = 18
         Me.btnDD_Filtro.Text = "No. Documento"
-        '
-        'puMenu_btnDropDown_Filtro
-        '
-        Me.puMenu_btnDropDown_Filtro.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Nom), New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Ape), New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Doc)})
-        Me.puMenu_btnDropDown_Filtro.Manager = Me.BarManager1
-        Me.puMenu_btnDropDown_Filtro.Name = "puMenu_btnDropDown_Filtro"
-        '
-        'pu_btn_Nom
-        '
-        Me.pu_btn_Nom.Caption = "Nombre"
-        Me.pu_btn_Nom.Id = 8
-        Me.pu_btn_Nom.ImageOptions.ImageUri.Uri = "AlignHorizontalTop;Size16x16"
-        Me.pu_btn_Nom.Name = "pu_btn_Nom"
-        '
-        'pu_btn_Ape
-        '
-        Me.pu_btn_Ape.Caption = "Apellido"
-        Me.pu_btn_Ape.Id = 9
-        Me.pu_btn_Ape.ImageOptions.ImageUri.Uri = "AlignHorizontalCenter;Size16x16"
-        Me.pu_btn_Ape.Name = "pu_btn_Ape"
-        '
-        'pu_btn_Doc
-        '
-        Me.pu_btn_Doc.Caption = "No. Documento"
-        Me.pu_btn_Doc.Id = 15
-        Me.pu_btn_Doc.ImageOptions.ImageUri.Uri = "Edit;Size16x16"
-        Me.pu_btn_Doc.Name = "pu_btn_Doc"
-        '
-        'BarManager1
-        '
-        Me.BarManager1.DockControls.Add(Me.barDockControlTop)
-        Me.BarManager1.DockControls.Add(Me.barDockControlBottom)
-        Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
-        Me.BarManager1.DockControls.Add(Me.barDockControlRight)
-        Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.pu_btn_Editar, Me.pu_btn_Eliminar, Me.pu_btn_Nom, Me.pu_btn_Ape, Me.pu_btn_Tipo, Me.pu_btn_Precio, Me.pu_btn_Estado, Me.pu_btn_Piso, Me.pu_btn_Numero, Me.pu_btn_Doc})
-        Me.BarManager1.MaxItemId = 16
-        '
-        'barDockControlTop
-        '
-        Me.barDockControlTop.CausesValidation = False
-        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(1086, 0)
-        '
-        'barDockControlBottom
-        '
-        Me.barDockControlBottom.CausesValidation = False
-        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 513)
-        Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1086, 0)
-        '
-        'barDockControlLeft
-        '
-        Me.barDockControlLeft.CausesValidation = False
-        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 513)
-        '
-        'barDockControlRight
-        '
-        Me.barDockControlRight.CausesValidation = False
-        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1086, 0)
-        Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 513)
-        '
-        'pu_btn_Editar
-        '
-        Me.pu_btn_Editar.Caption = "Editar"
-        Me.pu_btn_Editar.Id = 0
-        Me.pu_btn_Editar.ImageOptions.ImageUri.Uri = "Edit;Size16x16;Colored"
-        Me.pu_btn_Editar.Name = "pu_btn_Editar"
-        '
-        'pu_btn_Eliminar
-        '
-        Me.pu_btn_Eliminar.Caption = "Eliminar"
-        Me.pu_btn_Eliminar.Id = 1
-        Me.pu_btn_Eliminar.ImageOptions.ImageUri.Uri = "Delete;Size16x16"
-        Me.pu_btn_Eliminar.Name = "pu_btn_Eliminar"
-        '
-        'pu_btn_Tipo
-        '
-        Me.pu_btn_Tipo.Caption = "Tipo de Habitación"
-        Me.pu_btn_Tipo.Id = 10
-        Me.pu_btn_Tipo.ImageOptions.ImageUri.Uri = "ListBullets;Size16x16"
-        Me.pu_btn_Tipo.Name = "pu_btn_Tipo"
-        '
-        'pu_btn_Precio
-        '
-        Me.pu_btn_Precio.Caption = "Precio"
-        Me.pu_btn_Precio.Id = 11
-        Me.pu_btn_Precio.ImageOptions.ImageUri.Uri = "Currency;Size16x16"
-        Me.pu_btn_Precio.Name = "pu_btn_Precio"
-        '
-        'pu_btn_Estado
-        '
-        Me.pu_btn_Estado.Caption = "Estado"
-        Me.pu_btn_Estado.Id = 12
-        Me.pu_btn_Estado.ImageOptions.ImageUri.Uri = "Apply;Size16x16"
-        Me.pu_btn_Estado.Name = "pu_btn_Estado"
-        '
-        'pu_btn_Piso
-        '
-        Me.pu_btn_Piso.Caption = "Piso"
-        Me.pu_btn_Piso.Id = 13
-        Me.pu_btn_Piso.ImageOptions.ImageUri.Uri = "ListNumbers;Size16x16"
-        Me.pu_btn_Piso.Name = "pu_btn_Piso"
-        '
-        'pu_btn_Numero
-        '
-        Me.pu_btn_Numero.Caption = "No. Habitación"
-        Me.pu_btn_Numero.Id = 14
-        Me.pu_btn_Numero.ImageOptions.ImageUri.Uri = "Today;Size16x16"
-        Me.pu_btn_Numero.Name = "pu_btn_Numero"
         '
         'GridControl1
         '
@@ -279,7 +178,7 @@ Partial Class frmClientes
         Me.GridControl1.MainView = Me.GridView1
         Me.GridControl1.Name = "GridControl1"
         Me.GridControl1.Size = New System.Drawing.Size(583, 297)
-        Me.GridControl1.TabIndex = 15
+        Me.GridControl1.TabIndex = 20
         Me.GridControl1.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.GridView1})
         '
         'GridView1
@@ -288,7 +187,7 @@ Partial Class frmClientes
         Me.GridView1.Appearance.EvenRow.Options.UseBackColor = True
         Me.GridView1.Appearance.FocusedRow.BackColor = System.Drawing.Color.Moccasin
         Me.GridView1.Appearance.FocusedRow.Options.UseBackColor = True
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.idPersona, Me.nombre, Me.apellido, Me.tipoDocumento, Me.noDocumento, Me.direccion, Me.telefono, Me.email, Me.codigoCliente})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.idPersona, Me.nombre, Me.apellido, Me.tipoDocumento, Me.noDocumento, Me.direccion, Me.telefono, Me.email, Me.sueldo, Me.acceso, Me.login, Me.password, Me.estado})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.GroupPanelText = " "
         Me.GridView1.Name = "GridView1"
@@ -382,14 +281,44 @@ Partial Class frmClientes
         Me.email.VisibleIndex = 6
         Me.email.Width = 117
         '
-        'codigoCliente
+        'sueldo
         '
-        Me.codigoCliente.Caption = "Código"
-        Me.codigoCliente.FieldName = "codigoCliente"
-        Me.codigoCliente.Name = "codigoCliente"
-        Me.codigoCliente.Visible = True
-        Me.codigoCliente.VisibleIndex = 7
-        Me.codigoCliente.Width = 30
+        Me.sueldo.Caption = "Sueldo"
+        Me.sueldo.FieldName = "sueldo"
+        Me.sueldo.Name = "sueldo"
+        Me.sueldo.Visible = True
+        Me.sueldo.VisibleIndex = 7
+        Me.sueldo.Width = 30
+        '
+        'acceso
+        '
+        Me.acceso.Caption = "Acceso"
+        Me.acceso.FieldName = "acceso"
+        Me.acceso.Name = "acceso"
+        Me.acceso.Visible = True
+        Me.acceso.VisibleIndex = 8
+        '
+        'login
+        '
+        Me.login.Caption = "Usuario"
+        Me.login.FieldName = "login"
+        Me.login.Name = "login"
+        Me.login.Visible = True
+        Me.login.VisibleIndex = 9
+        '
+        'password
+        '
+        Me.password.Caption = "Password"
+        Me.password.FieldName = "password"
+        Me.password.Name = "password"
+        '
+        'estado
+        '
+        Me.estado.Caption = "Estado"
+        Me.estado.FieldName = "estado"
+        Me.estado.Name = "estado"
+        Me.estado.Visible = True
+        Me.estado.VisibleIndex = 11
         '
         'btnCargarLista
         '
@@ -398,7 +327,7 @@ Partial Class frmClientes
         Me.btnCargarLista.Location = New System.Drawing.Point(8, 412)
         Me.btnCargarLista.Name = "btnCargarLista"
         Me.btnCargarLista.Size = New System.Drawing.Size(115, 23)
-        Me.btnCargarLista.TabIndex = 11
+        Me.btnCargarLista.TabIndex = 16
         Me.btnCargarLista.Text = "Cargar Listado"
         '
         'lblTotalRegistros
@@ -408,14 +337,25 @@ Partial Class frmClientes
         Me.lblTotalRegistros.Appearance.Options.UseFont = True
         Me.lblTotalRegistros.Location = New System.Drawing.Point(352, 415)
         Me.lblTotalRegistros.Name = "lblTotalRegistros"
-        Me.lblTotalRegistros.Size = New System.Drawing.Size(140, 16)
+        Me.lblTotalRegistros.Size = New System.Drawing.Size(130, 16)
         Me.lblTotalRegistros.TabIndex = 4
-        Me.lblTotalRegistros.Text = "Registro de habitaciones"
+        Me.lblTotalRegistros.Text = "Empleados registrados"
         '
         'GroupControl1
         '
         Me.GroupControl1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.GroupControl1.Controls.Add(Me.cboxEstado)
+        Me.GroupControl1.Controls.Add(Me.LabelControl13)
+        Me.GroupControl1.Controls.Add(Me.LabelControl12)
+        Me.GroupControl1.Controls.Add(Me.txtPassword)
+        Me.GroupControl1.Controls.Add(Me.SeparatorControl1)
+        Me.GroupControl1.Controls.Add(Me.LabelControl11)
+        Me.GroupControl1.Controls.Add(Me.txtLogin)
+        Me.GroupControl1.Controls.Add(Me.cboxAcceso)
+        Me.GroupControl1.Controls.Add(Me.LabelControl10)
+        Me.GroupControl1.Controls.Add(Me.LabelControl9)
+        Me.GroupControl1.Controls.Add(Me.txtSueldo)
         Me.GroupControl1.Controls.Add(Me.LabelControl8)
         Me.GroupControl1.Controls.Add(Me.txtEmail)
         Me.GroupControl1.Controls.Add(Me.LabelControl7)
@@ -428,19 +368,119 @@ Partial Class frmClientes
         Me.GroupControl1.Controls.Add(Me.txtApellido)
         Me.GroupControl1.Controls.Add(Me.LabelControl2)
         Me.GroupControl1.Controls.Add(Me.txtNombre)
-        Me.GroupControl1.Controls.Add(Me.LabelControl9)
         Me.GroupControl1.Controls.Add(Me.btnCancelar)
         Me.GroupControl1.Controls.Add(Me.btnGuardar)
         Me.GroupControl1.Controls.Add(Me.btnNuevo)
         Me.GroupControl1.Controls.Add(Me.cboxTipoDocumento)
         Me.GroupControl1.Controls.Add(Me.LabelControl3)
         Me.GroupControl1.Controls.Add(Me.txtIdPersona)
-        Me.GroupControl1.Controls.Add(Me.txtCodCliente)
         Me.GroupControl1.Location = New System.Drawing.Point(12, 47)
         Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.Size = New System.Drawing.Size(448, 315)
-        Me.GroupControl1.TabIndex = 6
-        Me.GroupControl1.Text = "Registro de Clientes"
+        Me.GroupControl1.Size = New System.Drawing.Size(448, 454)
+        Me.GroupControl1.TabIndex = 9
+        Me.GroupControl1.Text = "Registro de Trabajadores"
+        '
+        'cboxEstado
+        '
+        Me.cboxEstado.EditValue = "A"
+        Me.cboxEstado.Location = New System.Drawing.Point(101, 374)
+        Me.cboxEstado.Name = "cboxEstado"
+        Me.cboxEstado.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.cboxEstado.Properties.DropDownRows = 5
+        Me.cboxEstado.Properties.Items.AddRange(New Object() {"A", "I"})
+        Me.cboxEstado.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+        Me.cboxEstado.Size = New System.Drawing.Size(41, 20)
+        Me.cboxEstado.TabIndex = 12
+        '
+        'LabelControl13
+        '
+        Me.LabelControl13.Location = New System.Drawing.Point(58, 377)
+        Me.LabelControl13.Name = "LabelControl13"
+        Me.LabelControl13.Size = New System.Drawing.Size(37, 13)
+        Me.LabelControl13.TabIndex = 41
+        Me.LabelControl13.Text = "Estado:"
+        '
+        'LabelControl12
+        '
+        Me.LabelControl12.Location = New System.Drawing.Point(45, 347)
+        Me.LabelControl12.Name = "LabelControl12"
+        Me.LabelControl12.Size = New System.Drawing.Size(50, 13)
+        Me.LabelControl12.TabIndex = 39
+        Me.LabelControl12.Text = "Password:"
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Location = New System.Drawing.Point(101, 344)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Properties.Mask.BeepOnError = True
+        Me.txtPassword.Properties.Mask.EditMask = "f"
+        Me.txtPassword.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.txtPassword.Size = New System.Drawing.Size(153, 20)
+        Me.txtPassword.TabIndex = 11
+        '
+        'SeparatorControl1
+        '
+        Me.SeparatorControl1.Location = New System.Drawing.Point(14, 265)
+        Me.SeparatorControl1.Name = "SeparatorControl1"
+        Me.SeparatorControl1.Size = New System.Drawing.Size(381, 23)
+        Me.SeparatorControl1.TabIndex = 37
+        '
+        'LabelControl11
+        '
+        Me.LabelControl11.Location = New System.Drawing.Point(55, 321)
+        Me.LabelControl11.Name = "LabelControl11"
+        Me.LabelControl11.Size = New System.Drawing.Size(40, 13)
+        Me.LabelControl11.TabIndex = 36
+        Me.LabelControl11.Text = "Usuario:"
+        '
+        'txtLogin
+        '
+        Me.txtLogin.Location = New System.Drawing.Point(101, 318)
+        Me.txtLogin.Name = "txtLogin"
+        Me.txtLogin.Properties.Mask.BeepOnError = True
+        Me.txtLogin.Properties.Mask.EditMask = "f"
+        Me.txtLogin.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.txtLogin.Size = New System.Drawing.Size(153, 20)
+        Me.txtLogin.TabIndex = 10
+        '
+        'cboxAcceso
+        '
+        Me.cboxAcceso.EditValue = "Recepcionista"
+        Me.cboxAcceso.Location = New System.Drawing.Point(101, 289)
+        Me.cboxAcceso.Name = "cboxAcceso"
+        Me.cboxAcceso.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.cboxAcceso.Properties.DropDownRows = 5
+        Me.cboxAcceso.Properties.Items.AddRange(New Object() {"Administrador", "Digitador", "Empleado", "Recepcionista"})
+        Me.cboxAcceso.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
+        Me.cboxAcceso.Size = New System.Drawing.Size(153, 20)
+        Me.cboxAcceso.TabIndex = 9
+        '
+        'LabelControl10
+        '
+        Me.LabelControl10.Location = New System.Drawing.Point(57, 292)
+        Me.LabelControl10.Name = "LabelControl10"
+        Me.LabelControl10.Size = New System.Drawing.Size(38, 13)
+        Me.LabelControl10.TabIndex = 34
+        Me.LabelControl10.Text = "Acceso:"
+        '
+        'LabelControl9
+        '
+        Me.LabelControl9.Location = New System.Drawing.Point(59, 245)
+        Me.LabelControl9.Name = "LabelControl9"
+        Me.LabelControl9.Size = New System.Drawing.Size(36, 13)
+        Me.LabelControl9.TabIndex = 32
+        Me.LabelControl9.Text = "Sueldo:"
+        '
+        'txtSueldo
+        '
+        Me.txtSueldo.Location = New System.Drawing.Point(101, 242)
+        Me.txtSueldo.Name = "txtSueldo"
+        Me.txtSueldo.Properties.Mask.BeepOnError = True
+        Me.txtSueldo.Properties.Mask.EditMask = "f"
+        Me.txtSueldo.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
+        Me.txtSueldo.Properties.Mask.UseMaskAsDisplayFormat = True
+        Me.txtSueldo.Size = New System.Drawing.Size(123, 20)
+        Me.txtSueldo.TabIndex = 8
         '
         'LabelControl8
         '
@@ -548,43 +588,33 @@ Partial Class frmClientes
         Me.txtNombre.Size = New System.Drawing.Size(231, 20)
         Me.txtNombre.TabIndex = 1
         '
-        'LabelControl9
-        '
-        Me.LabelControl9.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.LabelControl9.Appearance.Options.UseFont = True
-        Me.LabelControl9.Location = New System.Drawing.Point(372, 27)
-        Me.LabelControl9.Name = "LabelControl9"
-        Me.LabelControl9.Size = New System.Drawing.Size(23, 13)
-        Me.LabelControl9.TabIndex = 18
-        Me.LabelControl9.Text = "CLI-"
-        '
         'btnCancelar
         '
         Me.btnCancelar.ImageUri.Uri = "Cancel;Size16x16;Office2013"
-        Me.btnCancelar.Location = New System.Drawing.Point(345, 272)
+        Me.btnCancelar.Location = New System.Drawing.Point(345, 412)
         Me.btnCancelar.Name = "btnCancelar"
         Me.btnCancelar.Size = New System.Drawing.Size(75, 23)
-        Me.btnCancelar.TabIndex = 10
+        Me.btnCancelar.TabIndex = 15
         Me.btnCancelar.Text = "Cancelar"
         '
         'btnGuardar
         '
         Me.btnGuardar.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft
         Me.btnGuardar.ImageUri.Uri = "Apply;Size16x16;Office2013"
-        Me.btnGuardar.Location = New System.Drawing.Point(264, 272)
+        Me.btnGuardar.Location = New System.Drawing.Point(264, 412)
         Me.btnGuardar.Name = "btnGuardar"
         Me.btnGuardar.Size = New System.Drawing.Size(75, 23)
-        Me.btnGuardar.TabIndex = 9
+        Me.btnGuardar.TabIndex = 14
         Me.btnGuardar.Text = "Guardar"
         '
         'btnNuevo
         '
         Me.btnNuevo.ImageLocation = DevExpress.XtraEditors.ImageLocation.MiddleLeft
         Me.btnNuevo.ImageUri.Uri = "AddItem;Size16x16;Office2013"
-        Me.btnNuevo.Location = New System.Drawing.Point(101, 272)
+        Me.btnNuevo.Location = New System.Drawing.Point(101, 412)
         Me.btnNuevo.Name = "btnNuevo"
         Me.btnNuevo.Size = New System.Drawing.Size(75, 23)
-        Me.btnNuevo.TabIndex = 8
+        Me.btnNuevo.TabIndex = 13
         Me.btnNuevo.Text = "Nuevo"
         '
         'cboxTipoDocumento
@@ -615,29 +645,15 @@ Partial Class frmClientes
         Me.txtIdPersona.TabIndex = 1
         Me.txtIdPersona.Visible = False
         '
-        'txtCodCliente
-        '
-        Me.txtCodCliente.EditValue = ""
-        Me.txtCodCliente.Enabled = False
-        Me.txtCodCliente.Location = New System.Drawing.Point(401, 24)
-        Me.txtCodCliente.Name = "txtCodCliente"
-        Me.txtCodCliente.Properties.AppearanceReadOnly.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
-        Me.txtCodCliente.Properties.AppearanceReadOnly.Options.UseFont = True
-        Me.txtCodCliente.Properties.AppearanceReadOnly.Options.UseTextOptions = True
-        Me.txtCodCliente.Properties.AppearanceReadOnly.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near
-        Me.txtCodCliente.Properties.ReadOnly = True
-        Me.txtCodCliente.Size = New System.Drawing.Size(42, 20)
-        Me.txtCodCliente.TabIndex = 0
-        '
         'LabelControl1
         '
         Me.LabelControl1.Appearance.Font = New System.Drawing.Font("Tahoma", 18.0!, System.Drawing.FontStyle.Bold)
         Me.LabelControl1.Appearance.Options.UseFont = True
         Me.LabelControl1.Location = New System.Drawing.Point(12, 12)
         Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(95, 29)
-        Me.LabelControl1.TabIndex = 5
-        Me.LabelControl1.Text = "Clientes"
+        Me.LabelControl1.Size = New System.Drawing.Size(157, 29)
+        Me.LabelControl1.TabIndex = 8
+        Me.LabelControl1.Text = "Trabajadores"
         '
         'Timer1
         '
@@ -649,7 +665,125 @@ Partial Class frmClientes
         Me.puMenu_gridClientes.Manager = Me.BarManager1
         Me.puMenu_gridClientes.Name = "puMenu_gridClientes"
         '
-        'frmClientes
+        'pu_btn_Editar
+        '
+        Me.pu_btn_Editar.Caption = "Editar"
+        Me.pu_btn_Editar.Id = 0
+        Me.pu_btn_Editar.ImageOptions.ImageUri.Uri = "Edit;Size16x16;Colored"
+        Me.pu_btn_Editar.Name = "pu_btn_Editar"
+        '
+        'pu_btn_Eliminar
+        '
+        Me.pu_btn_Eliminar.Caption = "Eliminar"
+        Me.pu_btn_Eliminar.Id = 1
+        Me.pu_btn_Eliminar.ImageOptions.ImageUri.Uri = "Delete;Size16x16"
+        Me.pu_btn_Eliminar.Name = "pu_btn_Eliminar"
+        '
+        'BarManager1
+        '
+        Me.BarManager1.DockControls.Add(Me.barDockControlTop)
+        Me.BarManager1.DockControls.Add(Me.barDockControlBottom)
+        Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
+        Me.BarManager1.DockControls.Add(Me.barDockControlRight)
+        Me.BarManager1.Form = Me
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.pu_btn_Editar, Me.pu_btn_Eliminar, Me.pu_btn_Nom, Me.pu_btn_Ape, Me.pu_btn_Tipo, Me.pu_btn_Precio, Me.pu_btn_Estado, Me.pu_btn_Piso, Me.pu_btn_Numero, Me.pu_btn_Doc})
+        Me.BarManager1.MaxItemId = 16
+        '
+        'barDockControlTop
+        '
+        Me.barDockControlTop.CausesValidation = False
+        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlTop.Manager = Me.BarManager1
+        Me.barDockControlTop.Size = New System.Drawing.Size(1086, 0)
+        '
+        'barDockControlBottom
+        '
+        Me.barDockControlBottom.CausesValidation = False
+        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 513)
+        Me.barDockControlBottom.Manager = Me.BarManager1
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1086, 0)
+        '
+        'barDockControlLeft
+        '
+        Me.barDockControlLeft.CausesValidation = False
+        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlLeft.Manager = Me.BarManager1
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 513)
+        '
+        'barDockControlRight
+        '
+        Me.barDockControlRight.CausesValidation = False
+        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
+        Me.barDockControlRight.Location = New System.Drawing.Point(1086, 0)
+        Me.barDockControlRight.Manager = Me.BarManager1
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 513)
+        '
+        'pu_btn_Nom
+        '
+        Me.pu_btn_Nom.Caption = "Nombre"
+        Me.pu_btn_Nom.Id = 8
+        Me.pu_btn_Nom.ImageOptions.ImageUri.Uri = "AlignHorizontalTop;Size16x16"
+        Me.pu_btn_Nom.Name = "pu_btn_Nom"
+        '
+        'pu_btn_Ape
+        '
+        Me.pu_btn_Ape.Caption = "Apellido"
+        Me.pu_btn_Ape.Id = 9
+        Me.pu_btn_Ape.ImageOptions.ImageUri.Uri = "AlignHorizontalCenter;Size16x16"
+        Me.pu_btn_Ape.Name = "pu_btn_Ape"
+        '
+        'pu_btn_Tipo
+        '
+        Me.pu_btn_Tipo.Caption = "Tipo de Habitación"
+        Me.pu_btn_Tipo.Id = 10
+        Me.pu_btn_Tipo.ImageOptions.ImageUri.Uri = "ListBullets;Size16x16"
+        Me.pu_btn_Tipo.Name = "pu_btn_Tipo"
+        '
+        'pu_btn_Precio
+        '
+        Me.pu_btn_Precio.Caption = "Precio"
+        Me.pu_btn_Precio.Id = 11
+        Me.pu_btn_Precio.ImageOptions.ImageUri.Uri = "Currency;Size16x16"
+        Me.pu_btn_Precio.Name = "pu_btn_Precio"
+        '
+        'pu_btn_Estado
+        '
+        Me.pu_btn_Estado.Caption = "Estado"
+        Me.pu_btn_Estado.Id = 12
+        Me.pu_btn_Estado.ImageOptions.ImageUri.Uri = "Apply;Size16x16"
+        Me.pu_btn_Estado.Name = "pu_btn_Estado"
+        '
+        'pu_btn_Piso
+        '
+        Me.pu_btn_Piso.Caption = "Piso"
+        Me.pu_btn_Piso.Id = 13
+        Me.pu_btn_Piso.ImageOptions.ImageUri.Uri = "ListNumbers;Size16x16"
+        Me.pu_btn_Piso.Name = "pu_btn_Piso"
+        '
+        'pu_btn_Numero
+        '
+        Me.pu_btn_Numero.Caption = "No. Habitación"
+        Me.pu_btn_Numero.Id = 14
+        Me.pu_btn_Numero.ImageOptions.ImageUri.Uri = "Today;Size16x16"
+        Me.pu_btn_Numero.Name = "pu_btn_Numero"
+        '
+        'pu_btn_Doc
+        '
+        Me.pu_btn_Doc.Caption = "No. Documento"
+        Me.pu_btn_Doc.Id = 15
+        Me.pu_btn_Doc.ImageOptions.ImageUri.Uri = "Edit;Size16x16"
+        Me.pu_btn_Doc.Name = "pu_btn_Doc"
+        '
+        'puMenu_btnDropDown_Filtro
+        '
+        Me.puMenu_btnDropDown_Filtro.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Nom), New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Ape), New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Doc)})
+        Me.puMenu_btnDropDown_Filtro.Manager = Me.BarManager1
+        Me.puMenu_btnDropDown_Filtro.Name = "puMenu_btnDropDown_Filtro"
+        '
+        'frmTrabajadores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -661,20 +795,23 @@ Partial Class frmClientes
         Me.Controls.Add(Me.barDockControlRight)
         Me.Controls.Add(Me.barDockControlBottom)
         Me.Controls.Add(Me.barDockControlTop)
-        Me.Name = "frmClientes"
-        Me.Text = "Registro de Clientes"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Name = "frmTrabajadores"
+        Me.Text = "Registro de Trabajadores"
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl2.ResumeLayout(False)
         Me.GroupControl2.PerformLayout()
         CType(Me.txtBuscar.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.puMenu_btnDropDown_Filtro, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl1.ResumeLayout(False)
         Me.GroupControl1.PerformLayout()
+        CType(Me.cboxEstado.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SeparatorControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtLogin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboxAcceso.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtSueldo.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEmail.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTelefono.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDireccion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -683,9 +820,10 @@ Partial Class frmClientes
         CType(Me.txtNombre.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboxTipoDocumento.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtIdPersona.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtCodCliente.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.puMenu_gridClientes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.puMenu_btnDropDown_Filtro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -699,30 +837,46 @@ Partial Class frmClientes
     Friend WithEvents GridView1 As DevExpress.XtraGrid.Views.Grid.GridView
     Friend WithEvents idPersona As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents nombre As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents apellido As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents tipoDocumento As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents noDocumento As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents direccion As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents telefono As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents email As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents sueldo As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents btnCargarLista As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents lblTotalRegistros As DevExpress.XtraEditors.LabelControl
     Friend WithEvents GroupControl1 As DevExpress.XtraEditors.GroupControl
-    Friend WithEvents LabelControl9 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents btnCancelar As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents btnGuardar As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents btnNuevo As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents cboxTipoDocumento As DevExpress.XtraEditors.ComboBoxEdit
-    Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtIdPersona As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents txtCodCliente As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtNombre As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents LabelControl4 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtApellido As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtNoDocumento As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl8 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents txtEmail As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl7 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents txtTelefono As DevExpress.XtraEditors.TextEdit
     Friend WithEvents LabelControl6 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents txtDireccion As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl5 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtNoDocumento As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl4 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtApellido As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl2 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtNombre As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents btnCancelar As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnGuardar As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnNuevo As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents cboxTipoDocumento As DevExpress.XtraEditors.ComboBoxEdit
+    Friend WithEvents LabelControl3 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtIdPersona As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents LabelControl1 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents LabelControl9 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtSueldo As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents cboxEstado As DevExpress.XtraEditors.ComboBoxEdit
+    Friend WithEvents LabelControl13 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents LabelControl12 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtPassword As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents SeparatorControl1 As DevExpress.XtraEditors.SeparatorControl
+    Friend WithEvents LabelControl11 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtLogin As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents cboxAcceso As DevExpress.XtraEditors.ComboBoxEdit
+    Friend WithEvents LabelControl10 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents Timer1 As Timer
     Friend WithEvents BehaviorManager1 As DevExpress.Utils.Behaviors.BehaviorManager
     Friend WithEvents puMenu_gridClientes As DevExpress.XtraBars.PopupMenu
@@ -740,13 +894,10 @@ Partial Class frmClientes
     Friend WithEvents pu_btn_Estado As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents pu_btn_Piso As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents pu_btn_Numero As DevExpress.XtraBars.BarButtonItem
-    Friend WithEvents puMenu_btnDropDown_Filtro As DevExpress.XtraBars.PopupMenu
-    Friend WithEvents apellido As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents tipoDocumento As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents noDocumento As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents direccion As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents telefono As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents email As DevExpress.XtraGrid.Columns.GridColumn
-    Friend WithEvents codigoCliente As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents pu_btn_Doc As DevExpress.XtraBars.BarButtonItem
+    Friend WithEvents puMenu_btnDropDown_Filtro As DevExpress.XtraBars.PopupMenu
+    Friend WithEvents acceso As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents login As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents password As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents estado As DevExpress.XtraGrid.Columns.GridColumn
 End Class

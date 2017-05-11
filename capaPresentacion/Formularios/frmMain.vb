@@ -42,4 +42,8 @@ Public Class frmMain
     Private Sub BarButtonItem6_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
         llamarFormulario(frmClientes)
     End Sub
+
+    Private Sub BarButtonItem9_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem9.ItemClick
+        llamarFormulario(frmTrabajadores)
+    End Sub
 End Class
