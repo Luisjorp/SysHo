@@ -124,6 +124,12 @@
     <Compile Include="Formularios\frmHabitaciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\frmLogin.Designer.vb">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmLogin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\frmMain.Designer.vb">
       <DependentUpon>frmMain.vb</DependentUpon>
     </Compile>
@@ -177,6 +183,9 @@
     <EmbeddedResource Include="Formularios\frmHabitaciones.resx">
       <DependentUpon>frmHabitaciones.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmLogin.resx">
+      <DependentUpon>frmLogin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmMain.resx">
       <DependentUpon>frmMain.vb</DependentUpon>
     </EmbeddedResource>
@@ -224,6 +233,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="001-hotel-1.ico" />
+    <None Include="Resources\NOVATEK LOGO.png" />
+    <None Include="Resources\001-hotel-1.png" />
+    <None Include="Resources\login.png" />
     <None Include="Resources\16ayuda.png" />
     <None Include="Resources\conf16.png" />
     <None Include="Resources\16users.png" />

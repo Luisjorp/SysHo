@@ -118,5 +118,30 @@ Public Class cdTrabajador
             cn.Dispose()
         End Try
     End Sub
-
+    Public Function BD_Login(ByVal tra As ceTrabajador) As DataTable
+        Dim cn As New SqlConnection
+        Try
+            cn.ConnectionString = cadenaConexion()
+            cn.Open()
+            Dim da As New SqlDataAdapter("sp_Login", cn)
+            da.SelectCommand.CommandType = CommandType.StoredProcedure
+            With da.SelectCommand.Parameters
+                .Add("@i_login", SqlDbType.VarChar).Value = tra.login
+                .Add("@i_password", SqlDbType.VarChar).Value = tra.password
+            End With
+            da.SelectCommand.ExecuteNonQuery()
+            Dim datos As New DataTable
+            da.Fill(datos)
+            da = Nothing
+            Return datos
+        Catch ex As Exception
+            MsgBox("Error>>> " + ex.Message, MsgBoxStyle.Critical, "Informe de Error")
+            If cn.State = ConnectionState.Open Then cn.Close()
+            cn.Dispose()
+            Return Nothing
+        Finally
+            cn.Close()
+            cn.Dispose()
+        End Try
+    End Function
 End Class

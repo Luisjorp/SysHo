@@ -121,37 +121,46 @@
   <data name="16admon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\16admon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="16consultas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\16consultas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="16reservas1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\16reservas1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="002-bed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\002-bed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="conf16" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\conf16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="002-bed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\002-bed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="16reservas" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\16reservas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="16pagos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\16pagos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="conf162" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\conf162.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="16clientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\16clientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="16users" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\16users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="16ayuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16ayuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16reservas1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16reservas1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="001-hotel-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\001-hotel-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16clientes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16clientes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="005-shop" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\005-shop.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="16ayuda" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\16ayuda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="16reservas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16reservas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="16consultas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16consultas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="conf162" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\conf162.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\login.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NOVATEK LOGO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\NOVATEK LOGO.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

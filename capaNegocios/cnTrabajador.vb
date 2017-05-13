@@ -22,4 +22,9 @@ Public Class cnTrabajador
         Dim obj As New cdTrabajador
         Call obj.BD_eliminarTrabajador(tra)
     End Sub
+
+    Public Function RN_login(ByVal tra As ceTrabajador) As DataTable
+        Dim obj As New cdTrabajador
+        Return obj.BD_Login(tra)
+    End Function
 End Class

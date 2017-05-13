@@ -161,6 +161,7 @@ Partial Class frmTrabajadores
         '
         'btnDD_Filtro
         '
+        Me.btnDD_Filtro.DropDownControl = Me.puMenu_btnDropDown_Filtro
         Me.btnDD_Filtro.ImageUri.Uri = "Filter;Size16x16;Office2013"
         Me.btnDD_Filtro.Location = New System.Drawing.Point(383, 46)
         Me.btnDD_Filtro.Name = "btnDD_Filtro"

@@ -209,11 +209,11 @@ Public Class frmTrabajadores
     End Sub
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         If txtNombre.Text = "" Then
-            MsgBox("Ingresa el nombre del cliente", MsgBoxStyle.Exclamation, "¡Falta el nombre del cliente!")
+            MsgBox("Ingresa el nombre del trabajador", MsgBoxStyle.Exclamation, "¡Falta el nombre del trabajador!")
             txtNombre.Focus()
         Else
             If txtApellido.Text = "" Then
-                MsgBox("Ingresa el apellido del cliente", MsgBoxStyle.Exclamation, "¡Falta el apellido del cliente!")
+                MsgBox("Ingresa el apellido del trabajador", MsgBoxStyle.Exclamation, "¡Falta el apellido del trabajador!")
                 txtApellido.Focus()
             Else
                 If cboxTipoDocumento.Text = "" Then
@@ -221,41 +221,63 @@ Public Class frmTrabajadores
                     cboxTipoDocumento.Focus()
                 Else
                     If txtNoDocumento.Text = "" Then
-                        MsgBox("Ingresa el número de documento del cliente", MsgBoxStyle.Exclamation, "¡Falta el número de documento!")
+                        MsgBox("Ingresa el número de documento del trabajador", MsgBoxStyle.Exclamation, "¡Falta el número de documento!")
                         txtNoDocumento.Focus()
                     Else
                         If txtDireccion.Text = "" Then
-                            MsgBox("Ingresa una dirección válida", MsgBoxStyle.Exclamation, "¡Falta la dirección del cliente!")
+                            MsgBox("Ingresa una dirección válida", MsgBoxStyle.Exclamation, "¡Falta la dirección del trabajador!")
                             txtDireccion.Focus()
                         Else
                             If txtTelefono.Text = "" Then
-                                MsgBox("Ingresa un número de teléfono válido.", MsgBoxStyle.Exclamation, "¡Falta el teléfono del cliente!")
+                                MsgBox("Ingresa un número de teléfono válido.", MsgBoxStyle.Exclamation, "¡Falta el teléfono del trabajador!")
                                 txtTelefono.Focus()
                             Else
                                 If txtEmail.Text = "" Then
-                                    MsgBox("Ingresa el correo electrónico del cliente.", MsgBoxStyle.Exclamation, "¡Falta el e-mail del cliente!")
+                                    MsgBox("Ingresa el correo electrónico del trabajador.", MsgBoxStyle.Exclamation, "¡Falta el e-mail del trabajador!")
                                     txtEmail.Focus()
                                 Else
                                     If txtSueldo.Text = "" Then
+                                        MsgBox("Ingresa el sueldo del trabajador.", MsgBoxStyle.Exclamation, "¡Falta el sueldo del trabajador!")
+                                        txtSueldo.Focus()
                                     Else
-                                        'CUANDO TODOS LOS CAMPOS ESTAN COMPLETOS
-                                        If accion = "guardar" Then
-                                            Call ingresar_Trbajador()
-                                        ElseIf accion = "actualizar" Then
-                                            Call actualizar_Trabajador()
-                                        End If
+                                        If cboxAcceso.Text = "" Then
+                                            MsgBox("Seleccione el nivel de acceso del trabajador.", MsgBoxStyle.Exclamation, "¡Falta el nivel de acceso!")
+                                            cboxAcceso.Focus()
+                                        Else
+                                            If txtLogin.Text = "" Then
+                                                MsgBox("Ingresa un nombre de usuario.", MsgBoxStyle.Exclamation, "¡Falta el nombre de usuario!")
+                                                txtLogin.Focus()
+                                            Else
+                                                If txtPassword.Text = "" Then
+                                                    MsgBox("Ingresa una clave válida.", MsgBoxStyle.Exclamation, "¡Falta una clave de usuario!")
+                                                    txtPassword.Focus()
+                                                Else
+                                                    If cboxEstado.Text = "" Then
+                                                        MsgBox("Seleccione un estado inicial para el usuario.", MsgBoxStyle.Exclamation, "¡Falta el estado inicial del usuario!")
+                                                        cboxEstado.Focus()
+                                                    Else
+                                                        'CUANDO TODOS LOS CAMPOS ESTAN COMPLETOS
+                                                        If accion = "guardar" Then
+                                                            Call ingresar_Trbajador()
+                                                        ElseIf accion = "actualizar" Then
+                                                            Call actualizar_Trabajador()
+                                                        End If
 
-                                        Call cargar_Trabajadores()
-                                        Dim idSeleccionFila As String = txtIdPersona.Text
-                                        Call inhabilitarCampos()
-                                        btnNuevo.Enabled = True
+                                                        Call cargar_Trabajadores()
+                                                        Dim idSeleccionFila As String = txtIdPersona.Text
+                                                        Call inhabilitarCampos()
+                                                        btnNuevo.Enabled = True
 
-                                        'En este apartado se selecciona la nueva fila, o bien ya sea la editada, para no perder el foco de la misma.
-                                        For i As Integer = 0 To GridView1.RowCount - 1
-                                            If GridView1.GetRowCellValue(i, "idPersona") = idSeleccionFila Then
-                                                GridView1.FocusedRowHandle = i
+                                                        'En este apartado se selecciona la nueva fila, o bien ya sea la editada, para no perder el foco de la misma.
+                                                        For i As Integer = 0 To GridView1.RowCount - 1
+                                                            If GridView1.GetRowCellValue(i, "idPersona") = idSeleccionFila Then
+                                                                GridView1.FocusedRowHandle = i
+                                                            End If
+                                                        Next
+                                                    End If
+                                                End If
                                             End If
-                                        Next
+                                        End If
                                     End If
                                 End If
                             End If
@@ -317,7 +339,7 @@ Public Class frmTrabajadores
         accion = "actualizar"
     End Sub
     Private Sub pu_btn_Eliminar_ItemClick(sender As Object, e As ItemClickEventArgs) Handles pu_btn_Eliminar.ItemClick
-        Dim result As Integer = MessageBox.Show(Me, "¿Realmente desea eliminar este cliente del sistema?", "ESTÁ A PUNTO DE ELIMINAR UN REGISTRO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        Dim result As Integer = MessageBox.Show(Me, "¿Realmente desea eliminar este trabajador del sistema?", "ESTÁ A PUNTO DE ELIMINAR UN REGISTRO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If result = DialogResult.Yes Then
 
             Dim idSeleccionFila As String = (GridView1.GetRowCellValue(grid_index, "idPersona") + 1).ToString
