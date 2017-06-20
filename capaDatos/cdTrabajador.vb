@@ -77,6 +77,7 @@ Public Class cdTrabajador
         Try
             cmd.CommandTimeout = 20
             cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@i_idPersona", tra.idPersona)
             cmd.Parameters.AddWithValue("@i_nombre", tra.nombre)
             cmd.Parameters.AddWithValue("@i_apellido", tra.apellido)
             cmd.Parameters.AddWithValue("@i_tipoDocumento", tra.tipoDocumento)

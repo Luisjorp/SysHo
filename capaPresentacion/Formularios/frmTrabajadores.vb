@@ -53,6 +53,7 @@ Public Class frmTrabajadores
         Dim obj As New cnTrabajador
         Dim enTra As New ceTrabajador
 
+        enTra.idPersona = txtIdPersona.Text
         enTra.nombre = txtNombre.Text
         enTra.apellido = txtApellido.Text
         enTra.tipoDocumento = cboxTipoDocumento.Text

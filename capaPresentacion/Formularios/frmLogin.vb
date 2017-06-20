@@ -1,5 +1,8 @@
 ﻿Imports capaEntidad
 Imports capaNegocios
+Imports capaDatos
+
+
 Public Class frmLogin
 
     Public Sub Login()
@@ -20,7 +23,17 @@ Public Class frmLogin
                 MsgBox("No tiene acceso al sistema.", MsgBoxStyle.Critical, "Credenciales Incorrectas")
             Else
                 Dim frm As New frmMain()
-                'Faltan accesos
+
+                xIdPersona = datos.Rows(0)(0).ToString
+                xNombre = datos.Rows(0)(1).ToString
+                xApellido = datos.Rows(0)(2).ToString
+                xAcceso = datos.Rows(0)(3).ToString
+                xLogin = datos.Rows(0)(4).ToString
+                xEstado = datos.Rows(0)(6).ToString
+
+
+
+
                 frm.Show()
                 Close()
             End If

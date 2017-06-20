@@ -84,6 +84,8 @@
     <Reference Include="DevExpress.XtraReports.v16.2.Extensions, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraRichEdit.v16.2.Extensions, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v16.2.Core, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraTreeList.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraVerticalGrid.v16.2, Version=16.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
@@ -142,6 +144,12 @@
     <Compile Include="Formularios\frmProductos.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Formularios\frmReserva.Designer.vb">
+      <DependentUpon>frmReserva.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmReserva.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Formularios\frmTrabajadores.Designer.vb">
       <DependentUpon>frmTrabajadores.vb</DependentUpon>
     </Compile>
@@ -192,6 +200,9 @@
     <EmbeddedResource Include="Formularios\frmProductos.resx">
       <DependentUpon>frmProductos.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmReserva.resx">
+      <DependentUpon>frmReserva.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmTrabajadores.resx">
       <DependentUpon>frmTrabajadores.vb</DependentUpon>
     </EmbeddedResource>
@@ -210,6 +221,7 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -225,6 +237,10 @@
     <ProjectReference Include="..\..\capaEntidad\capaEntidad.vbproj">
       <Project>{4f3bfd6f-cb26-466b-bae9-9178521e596e}</Project>
       <Name>capaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\capaDatos\capaDatos.vbproj">
+      <Project>{d9a55f09-7854-4416-b0dd-f8e39fd96c55}</Project>
+      <Name>capaDatos</Name>
     </ProjectReference>
     <ProjectReference Include="..\capaNegocios\capaNegocios.vbproj">
       <Project>{37076d7e-5000-41c4-b56f-af788d444096}</Project>

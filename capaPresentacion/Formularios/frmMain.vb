@@ -1,5 +1,6 @@
 ﻿Imports DevExpress.XtraSplashScreen
 Imports DevExpress.XtraWaitForm.ProgressPanel
+Imports capaDatos
 
 Public Class frmMain
 
@@ -7,6 +8,7 @@ Public Class frmMain
     Private seconds As Integer = 2
     Private wFrm As New WaitForm1
 
+    '*************************************************Funciones************************************************************
     Private Sub llamarFormulario(frm As Form)
         If inicial = True Then SplashScreenManager.ShowForm(GetType(WaitForm1)) : timerSplash.Start()
 
@@ -15,6 +17,14 @@ Public Class frmMain
             .MdiParent = Me
             .Show()
         End With
+    End Sub
+    Private Sub GestionUsuario()
+
+        lblUsuario.Caption = String.Format("{0} / {1} {2}", xAcceso, xNombre, xApellido)
+        'Controlar los accesos
+        If xAcceso = "Administrador" Then
+
+        End If
     End Sub
 
     '*************************************************Timer's************************************************************
@@ -42,8 +52,14 @@ Public Class frmMain
     Private Sub BarButtonItem6_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem6.ItemClick
         llamarFormulario(frmClientes)
     End Sub
-
     Private Sub BarButtonItem9_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem9.ItemClick
         llamarFormulario(frmTrabajadores)
     End Sub
+    Private Sub BarButtonItem5_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BarButtonItem5.ItemClick
+        llamarFormulario(frmReserva)
+    End Sub
+    Private Sub frmMain_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        GestionUsuario()
+    End Sub
+
 End Class

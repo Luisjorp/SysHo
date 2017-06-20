@@ -22,24 +22,25 @@ Partial Class frmLogin
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmLogin))
         Me.PanelControl1 = New DevExpress.XtraEditors.PanelControl()
-        Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
-        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
-        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
-        Me.txtLogin = New DevExpress.XtraEditors.TextEdit()
-        Me.txtPassword = New DevExpress.XtraEditors.TextEdit()
-        Me.btnIngresar = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnSalir = New DevExpress.XtraEditors.SimpleButton()
         Me.LabelControl3 = New DevExpress.XtraEditors.LabelControl()
+        Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
+        Me.btnSalir = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnIngresar = New DevExpress.XtraEditors.SimpleButton()
+        Me.txtPassword = New DevExpress.XtraEditors.TextEdit()
+        Me.txtLogin = New DevExpress.XtraEditors.TextEdit()
+        Me.LabelControl2 = New DevExpress.XtraEditors.LabelControl()
+        Me.LabelControl1 = New DevExpress.XtraEditors.LabelControl()
         Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
         Me.LabelControl4 = New DevExpress.XtraEditors.LabelControl()
         Me.PictureEdit2 = New DevExpress.XtraEditors.PictureEdit()
         Me.PictureEdit1 = New DevExpress.XtraEditors.PictureEdit()
+        Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
         CType(Me.PanelControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.PanelControl1.SuspendLayout()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
-        CType(Me.txtLogin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtLogin.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -59,70 +60,6 @@ Partial Class frmLogin
         Me.PanelControl1.Size = New System.Drawing.Size(625, 62)
         Me.PanelControl1.TabIndex = 0
         '
-        'GroupControl1
-        '
-        Me.GroupControl1.Controls.Add(Me.btnSalir)
-        Me.GroupControl1.Controls.Add(Me.btnIngresar)
-        Me.GroupControl1.Controls.Add(Me.txtPassword)
-        Me.GroupControl1.Controls.Add(Me.txtLogin)
-        Me.GroupControl1.Controls.Add(Me.LabelControl2)
-        Me.GroupControl1.Controls.Add(Me.LabelControl1)
-        Me.GroupControl1.Location = New System.Drawing.Point(291, 98)
-        Me.GroupControl1.Name = "GroupControl1"
-        Me.GroupControl1.Size = New System.Drawing.Size(319, 214)
-        Me.GroupControl1.TabIndex = 2
-        Me.GroupControl1.Text = "Acceso al Sistema"
-        '
-        'LabelControl1
-        '
-        Me.LabelControl1.Location = New System.Drawing.Point(42, 49)
-        Me.LabelControl1.Name = "LabelControl1"
-        Me.LabelControl1.Size = New System.Drawing.Size(40, 13)
-        Me.LabelControl1.TabIndex = 0
-        Me.LabelControl1.Text = "Usuario:"
-        '
-        'LabelControl2
-        '
-        Me.LabelControl2.Location = New System.Drawing.Point(42, 107)
-        Me.LabelControl2.Name = "LabelControl2"
-        Me.LabelControl2.Size = New System.Drawing.Size(60, 13)
-        Me.LabelControl2.TabIndex = 1
-        Me.LabelControl2.Text = "Contraseña:"
-        '
-        'txtLogin
-        '
-        Me.txtLogin.Location = New System.Drawing.Point(42, 68)
-        Me.txtLogin.Name = "txtLogin"
-        Me.txtLogin.Size = New System.Drawing.Size(229, 20)
-        Me.txtLogin.TabIndex = 2
-        '
-        'txtPassword
-        '
-        Me.txtPassword.Location = New System.Drawing.Point(42, 126)
-        Me.txtPassword.Name = "txtPassword"
-        Me.txtPassword.Size = New System.Drawing.Size(229, 20)
-        Me.txtPassword.TabIndex = 3
-        '
-        'btnIngresar
-        '
-        Me.btnIngresar.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnIngresar.ImageUri.Uri = "Apply;Size16x16"
-        Me.btnIngresar.Location = New System.Drawing.Point(42, 165)
-        Me.btnIngresar.Name = "btnIngresar"
-        Me.btnIngresar.Size = New System.Drawing.Size(75, 23)
-        Me.btnIngresar.TabIndex = 4
-        Me.btnIngresar.Text = "Ingresar"
-        '
-        'btnSalir
-        '
-        Me.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.btnSalir.ImageUri.Uri = "Close;Size16x16"
-        Me.btnSalir.Location = New System.Drawing.Point(196, 165)
-        Me.btnSalir.Name = "btnSalir"
-        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
-        Me.btnSalir.TabIndex = 5
-        Me.btnSalir.Text = "Salir"
-        '
         'LabelControl3
         '
         Me.LabelControl3.Appearance.Font = New System.Drawing.Font("Tahoma", 16.0!, System.Drawing.FontStyle.Bold)
@@ -140,6 +77,70 @@ Partial Class frmLogin
         Me.LabelControl3.Size = New System.Drawing.Size(141, 36)
         Me.LabelControl3.TabIndex = 0
         Me.LabelControl3.Text = "SysHo 1.0"
+        '
+        'GroupControl1
+        '
+        Me.GroupControl1.Controls.Add(Me.btnSalir)
+        Me.GroupControl1.Controls.Add(Me.btnIngresar)
+        Me.GroupControl1.Controls.Add(Me.txtPassword)
+        Me.GroupControl1.Controls.Add(Me.txtLogin)
+        Me.GroupControl1.Controls.Add(Me.LabelControl2)
+        Me.GroupControl1.Controls.Add(Me.LabelControl1)
+        Me.GroupControl1.Location = New System.Drawing.Point(291, 98)
+        Me.GroupControl1.Name = "GroupControl1"
+        Me.GroupControl1.Size = New System.Drawing.Size(319, 214)
+        Me.GroupControl1.TabIndex = 2
+        Me.GroupControl1.Text = "Acceso al Sistema"
+        '
+        'btnSalir
+        '
+        Me.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnSalir.ImageUri.Uri = "Close;Size16x16"
+        Me.btnSalir.Location = New System.Drawing.Point(196, 165)
+        Me.btnSalir.Name = "btnSalir"
+        Me.btnSalir.Size = New System.Drawing.Size(75, 23)
+        Me.btnSalir.TabIndex = 5
+        Me.btnSalir.Text = "Salir"
+        '
+        'btnIngresar
+        '
+        Me.btnIngresar.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.btnIngresar.ImageUri.Uri = "Apply;Size16x16"
+        Me.btnIngresar.Location = New System.Drawing.Point(42, 165)
+        Me.btnIngresar.Name = "btnIngresar"
+        Me.btnIngresar.Size = New System.Drawing.Size(75, 23)
+        Me.btnIngresar.TabIndex = 4
+        Me.btnIngresar.Text = "Ingresar"
+        '
+        'txtPassword
+        '
+        Me.txtPassword.Location = New System.Drawing.Point(42, 126)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(229, 20)
+        Me.txtPassword.TabIndex = 3
+        '
+        'txtLogin
+        '
+        Me.txtLogin.Location = New System.Drawing.Point(42, 68)
+        Me.txtLogin.Name = "txtLogin"
+        Me.txtLogin.Size = New System.Drawing.Size(229, 20)
+        Me.txtLogin.TabIndex = 2
+        '
+        'LabelControl2
+        '
+        Me.LabelControl2.Location = New System.Drawing.Point(42, 107)
+        Me.LabelControl2.Name = "LabelControl2"
+        Me.LabelControl2.Size = New System.Drawing.Size(60, 13)
+        Me.LabelControl2.TabIndex = 1
+        Me.LabelControl2.Text = "Contraseña:"
+        '
+        'LabelControl1
+        '
+        Me.LabelControl1.Location = New System.Drawing.Point(42, 49)
+        Me.LabelControl1.Name = "LabelControl1"
+        Me.LabelControl1.Size = New System.Drawing.Size(40, 13)
+        Me.LabelControl1.TabIndex = 0
+        Me.LabelControl1.Text = "Usuario:"
         '
         'LabelControl4
         '
@@ -183,6 +184,11 @@ Partial Class frmLogin
         Me.PictureEdit1.Size = New System.Drawing.Size(239, 214)
         Me.PictureEdit1.TabIndex = 3
         '
+        'DefaultLookAndFeel1
+        '
+        Me.DefaultLookAndFeel1.LookAndFeel.SkinMaskColor = System.Drawing.Color.Aquamarine
+        Me.DefaultLookAndFeel1.LookAndFeel.SkinName = "Office 2013"
+        '
         'frmLogin
         '
         Me.AcceptButton = Me.btnIngresar
@@ -208,8 +214,8 @@ Partial Class frmLogin
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl1.ResumeLayout(False)
         Me.GroupControl1.PerformLayout()
-        CType(Me.txtLogin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtPassword.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtLogin.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -231,4 +237,5 @@ Partial Class frmLogin
     Friend WithEvents PictureEdit1 As DevExpress.XtraEditors.PictureEdit
     Friend WithEvents LabelControl4 As DevExpress.XtraEditors.LabelControl
     Friend WithEvents PictureEdit2 As DevExpress.XtraEditors.PictureEdit
+    Friend WithEvents DefaultLookAndFeel1 As DevExpress.LookAndFeel.DefaultLookAndFeel
 End Class
