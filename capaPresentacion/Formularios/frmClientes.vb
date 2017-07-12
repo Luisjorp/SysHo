@@ -243,9 +243,10 @@ Public Class frmClientes
 
     'Grupo Lista
     Private Sub btnReporte_Click(sender As Object, e As EventArgs) Handles btnReporte.Click
-        Dim report As New reporteHabitaciones()
-        Dim cnhab As New cnHabitacion
-        report.BindingSource1.DataSource = cnhab.RN_listarHabitaciones
+        Dim report As New reporteClientes()
+        Dim cncli As New cnCliente
+
+        report.ObjectDataSource1.DataSource = cncli.RN_listarClientes
 
         Using printool As New ReportPrintTool(report)
             printool.ShowPreviewDialog()

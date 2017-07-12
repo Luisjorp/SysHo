@@ -56,6 +56,7 @@ Partial Public Class reporteHabitaciones
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
         Me.GroupFooter1 = New DevExpress.XtraReports.UI.GroupFooterBand()
         Me.BindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ReportFooter = New DevExpress.XtraReports.UI.ReportFooterBand()
         CType(Me.xrTable2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.xrTable1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -330,7 +331,7 @@ Partial Public Class reporteHabitaciones
         '
         Me.Detail.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.xrTable2})
         Me.Detail.Dpi = 100.0!
-        Me.Detail.HeightF = 62.5!
+        Me.Detail.HeightF = 68.75!
         Me.Detail.Name = "Detail"
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100.0!)
         Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
@@ -346,9 +347,15 @@ Partial Public Class reporteHabitaciones
         '
         Me.BindingSource1.DataSource = GetType(capaEntidad.ceHabitacion)
         '
+        'ReportFooter
+        '
+        Me.ReportFooter.Dpi = 100.0!
+        Me.ReportFooter.HeightF = 23.00002!
+        Me.ReportFooter.Name = "ReportFooter"
+        '
         'reporteHabitaciones
         '
-        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageFooter, Me.GroupHeader1, Me.GroupFooter1})
+        Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.PageFooter, Me.GroupHeader1, Me.GroupFooter1, Me.ReportFooter})
         Me.DataSource = Me.BindingSource1
         Me.Margins = New System.Drawing.Printing.Margins(35, 28, 86, 0)
         Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() {Me.Header, Me.TableHeader, Me.OddStyle, Me.EvenStyle, Me.Lines, Me.FooterLine})
@@ -394,4 +401,5 @@ Partial Public Class reporteHabitaciones
     Friend WithEvents BindingSource1 As BindingSource
     Friend WithEvents XrTableCell10 As DevExpress.XtraReports.UI.XRTableCell
     Friend WithEvents XrTableCell9 As DevExpress.XtraReports.UI.XRTableCell
+    Friend WithEvents ReportFooter As DevExpress.XtraReports.UI.ReportFooterBand
 End Class

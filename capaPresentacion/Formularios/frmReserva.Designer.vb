@@ -29,12 +29,38 @@ Partial Class frmReserva
         Me.numero = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.idCliente = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.nombreCliente = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.idTrabajador = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.nombreTrabajador = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.tipoReserva = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.fechaReserva = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.fechaIngreso = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.fechaSalida = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.costoAlojamiento = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.observacion = New DevExpress.XtraGrid.Columns.GridColumn()
+        Me.estado = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.btnCargarLista = New DevExpress.XtraEditors.SimpleButton()
         Me.lblTotalRegistros = New DevExpress.XtraEditors.LabelControl()
         Me.btnReporte = New DevExpress.XtraEditors.SimpleButton()
         Me.txtBuscar = New DevExpress.XtraEditors.SearchControl()
         Me.btnDD_Filtro = New DevExpress.XtraEditors.DropDownButton()
+        Me.puMenu_btnDropDown_Filtro = New DevExpress.XtraBars.PopupMenu(Me.components)
+        Me.pu_btn_Nom = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Desc = New DevExpress.XtraBars.BarButtonItem()
+        Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
+        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
+        Me.pu_btn_Editar = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Eliminar = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Tipo = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Precio = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Estado = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Piso = New DevExpress.XtraBars.BarButtonItem()
+        Me.pu_btn_Numero = New DevExpress.XtraBars.BarButtonItem()
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
+        Me.MemoExEdit1 = New DevExpress.XtraEditors.MemoExEdit()
+        Me.LabelControl12 = New DevExpress.XtraEditors.LabelControl()
         Me.txtTrabajador = New DevExpress.XtraEditors.ButtonEdit()
         Me.txtCliente = New DevExpress.XtraEditors.ButtonEdit()
         Me.txtNoHabitacion = New DevExpress.XtraEditors.ButtonEdit()
@@ -67,28 +93,16 @@ Partial Class frmReserva
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
         Me.puMenu_gridReservas = New DevExpress.XtraBars.PopupMenu(Me.components)
-        Me.pu_btn_Editar = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Eliminar = New DevExpress.XtraBars.BarButtonItem()
-        Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
-        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
-        Me.pu_btn_Nom = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Desc = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Tipo = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Precio = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Estado = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Piso = New DevExpress.XtraBars.BarButtonItem()
-        Me.pu_btn_Numero = New DevExpress.XtraBars.BarButtonItem()
-        Me.puMenu_btnDropDown_Filtro = New DevExpress.XtraBars.PopupMenu(Me.components)
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl2.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtBuscar.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.puMenu_btnDropDown_Filtro, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
+        CType(Me.MemoExEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTrabajador.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCliente.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNoHabitacion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -109,8 +123,6 @@ Partial Class frmReserva
         CType(Me.SeparatorControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puMenu_gridReservas, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.puMenu_btnDropDown_Filtro, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplashScreenManager1
@@ -158,7 +170,7 @@ Partial Class frmReserva
         Me.GridView1.Appearance.HeaderPanel.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold)
         Me.GridView1.Appearance.HeaderPanel.Options.UseBackColor = True
         Me.GridView1.Appearance.HeaderPanel.Options.UseFont = True
-        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.idReserva, Me.idHabitacion, Me.numero, Me.idCliente, Me.nombreCliente})
+        Me.GridView1.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.idReserva, Me.idHabitacion, Me.numero, Me.idCliente, Me.nombreCliente, Me.idTrabajador, Me.nombreTrabajador, Me.tipoReserva, Me.fechaReserva, Me.fechaIngreso, Me.fechaSalida, Me.costoAlojamiento, Me.observacion, Me.estado})
         Me.GridView1.GridControl = Me.GridControl1
         Me.GridView1.GroupPanelText = " "
         Me.GridView1.Name = "GridView1"
@@ -180,7 +192,6 @@ Partial Class frmReserva
         Me.idReserva.FieldName = "idReserva"
         Me.idReserva.Name = "idReserva"
         Me.idReserva.OptionsColumn.AllowEdit = False
-        Me.idReserva.OptionsColumn.FixedWidth = True
         Me.idReserva.OptionsColumn.ReadOnly = True
         Me.idReserva.Tag = ""
         '
@@ -190,11 +201,9 @@ Partial Class frmReserva
         Me.idHabitacion.FieldName = "idHabitacion"
         Me.idHabitacion.Name = "idHabitacion"
         Me.idHabitacion.OptionsColumn.AllowEdit = False
-        Me.idHabitacion.OptionsColumn.FixedWidth = True
         Me.idHabitacion.OptionsColumn.ReadOnly = True
         Me.idHabitacion.Visible = True
         Me.idHabitacion.VisibleIndex = 0
-        Me.idHabitacion.Width = 40
         '
         'numero
         '
@@ -202,7 +211,6 @@ Partial Class frmReserva
         Me.numero.FieldName = "numero"
         Me.numero.Name = "numero"
         Me.numero.OptionsColumn.AllowEdit = False
-        Me.numero.OptionsColumn.FixedWidth = True
         Me.numero.OptionsColumn.ReadOnly = True
         Me.numero.Visible = True
         Me.numero.VisibleIndex = 1
@@ -213,11 +221,9 @@ Partial Class frmReserva
         Me.idCliente.FieldName = "idCliente"
         Me.idCliente.Name = "idCliente"
         Me.idCliente.OptionsColumn.AllowEdit = False
-        Me.idCliente.OptionsColumn.FixedWidth = True
         Me.idCliente.OptionsColumn.ReadOnly = True
         Me.idCliente.Visible = True
         Me.idCliente.VisibleIndex = 2
-        Me.idCliente.Width = 20
         '
         'nombreCliente
         '
@@ -225,11 +231,81 @@ Partial Class frmReserva
         Me.nombreCliente.FieldName = "nombreCliente"
         Me.nombreCliente.Name = "nombreCliente"
         Me.nombreCliente.OptionsColumn.AllowEdit = False
-        Me.nombreCliente.OptionsColumn.FixedWidth = True
         Me.nombreCliente.OptionsColumn.ReadOnly = True
         Me.nombreCliente.Visible = True
         Me.nombreCliente.VisibleIndex = 3
-        Me.nombreCliente.Width = 20
+        '
+        'idTrabajador
+        '
+        Me.idTrabajador.Caption = "ID Trabajador"
+        Me.idTrabajador.FieldName = "idTrabajador"
+        Me.idTrabajador.Name = "idTrabajador"
+        Me.idTrabajador.Visible = True
+        Me.idTrabajador.VisibleIndex = 4
+        '
+        'nombreTrabajador
+        '
+        Me.nombreTrabajador.Caption = "Trabajador"
+        Me.nombreTrabajador.FieldName = "nombreTrabajador"
+        Me.nombreTrabajador.Name = "nombreTrabajador"
+        Me.nombreTrabajador.Visible = True
+        Me.nombreTrabajador.VisibleIndex = 5
+        '
+        'tipoReserva
+        '
+        Me.tipoReserva.Caption = "Tipo"
+        Me.tipoReserva.FieldName = "tipoReserva"
+        Me.tipoReserva.Name = "tipoReserva"
+        Me.tipoReserva.Visible = True
+        Me.tipoReserva.VisibleIndex = 6
+        '
+        'fechaReserva
+        '
+        Me.fechaReserva.Caption = "Fecha Reserva"
+        Me.fechaReserva.FieldName = "fechaReserva"
+        Me.fechaReserva.Name = "fechaReserva"
+        Me.fechaReserva.Visible = True
+        Me.fechaReserva.VisibleIndex = 7
+        '
+        'fechaIngreso
+        '
+        Me.fechaIngreso.Caption = "Fecha Ingreso"
+        Me.fechaIngreso.FieldName = "fechaIngreso"
+        Me.fechaIngreso.Name = "fechaIngreso"
+        Me.fechaIngreso.Visible = True
+        Me.fechaIngreso.VisibleIndex = 8
+        '
+        'fechaSalida
+        '
+        Me.fechaSalida.Caption = "Salida"
+        Me.fechaSalida.FieldName = "fechaSalida"
+        Me.fechaSalida.Name = "fechaSalida"
+        Me.fechaSalida.Visible = True
+        Me.fechaSalida.VisibleIndex = 9
+        '
+        'costoAlojamiento
+        '
+        Me.costoAlojamiento.Caption = "Costo"
+        Me.costoAlojamiento.FieldName = "costoAlojamiento"
+        Me.costoAlojamiento.Name = "costoAlojamiento"
+        Me.costoAlojamiento.Visible = True
+        Me.costoAlojamiento.VisibleIndex = 10
+        '
+        'observacion
+        '
+        Me.observacion.Caption = "Observación"
+        Me.observacion.FieldName = "observacion"
+        Me.observacion.Name = "observacion"
+        Me.observacion.Visible = True
+        Me.observacion.VisibleIndex = 11
+        '
+        'estado
+        '
+        Me.estado.Caption = "Estado"
+        Me.estado.FieldName = "estado"
+        Me.estado.Name = "estado"
+        Me.estado.Visible = True
+        Me.estado.VisibleIndex = 12
         '
         'btnCargarLista
         '
@@ -273,6 +349,7 @@ Partial Class frmReserva
         '
         'btnDD_Filtro
         '
+        Me.btnDD_Filtro.DropDownControl = Me.puMenu_btnDropDown_Filtro
         Me.btnDD_Filtro.ImageUri.Uri = "Filter;Size16x16;Office2013"
         Me.btnDD_Filtro.Location = New System.Drawing.Point(383, 46)
         Me.btnDD_Filtro.Name = "btnDD_Filtro"
@@ -280,12 +357,125 @@ Partial Class frmReserva
         Me.btnDD_Filtro.TabIndex = 18
         Me.btnDD_Filtro.Text = "Nombre"
         '
+        'puMenu_btnDropDown_Filtro
+        '
+        Me.puMenu_btnDropDown_Filtro.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Nom), New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Desc)})
+        Me.puMenu_btnDropDown_Filtro.Manager = Me.BarManager1
+        Me.puMenu_btnDropDown_Filtro.Name = "puMenu_btnDropDown_Filtro"
+        '
+        'pu_btn_Nom
+        '
+        Me.pu_btn_Nom.Caption = "Nombre"
+        Me.pu_btn_Nom.Id = 8
+        Me.pu_btn_Nom.ImageOptions.ImageUri.Uri = "AlignHorizontalTop;Size16x16"
+        Me.pu_btn_Nom.Name = "pu_btn_Nom"
+        '
+        'pu_btn_Desc
+        '
+        Me.pu_btn_Desc.Caption = "Descripción"
+        Me.pu_btn_Desc.Id = 9
+        Me.pu_btn_Desc.ImageOptions.ImageUri.Uri = "Columns;Size16x16"
+        Me.pu_btn_Desc.Name = "pu_btn_Desc"
+        '
+        'BarManager1
+        '
+        Me.BarManager1.DockControls.Add(Me.barDockControlTop)
+        Me.BarManager1.DockControls.Add(Me.barDockControlBottom)
+        Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
+        Me.BarManager1.DockControls.Add(Me.barDockControlRight)
+        Me.BarManager1.Form = Me
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.pu_btn_Editar, Me.pu_btn_Eliminar, Me.pu_btn_Nom, Me.pu_btn_Desc, Me.pu_btn_Tipo, Me.pu_btn_Precio, Me.pu_btn_Estado, Me.pu_btn_Piso, Me.pu_btn_Numero})
+        Me.BarManager1.MaxItemId = 15
+        '
+        'barDockControlTop
+        '
+        Me.barDockControlTop.CausesValidation = False
+        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlTop.Manager = Me.BarManager1
+        Me.barDockControlTop.Size = New System.Drawing.Size(1158, 0)
+        '
+        'barDockControlBottom
+        '
+        Me.barDockControlBottom.CausesValidation = False
+        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 572)
+        Me.barDockControlBottom.Manager = Me.BarManager1
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1158, 0)
+        '
+        'barDockControlLeft
+        '
+        Me.barDockControlLeft.CausesValidation = False
+        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlLeft.Manager = Me.BarManager1
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 572)
+        '
+        'barDockControlRight
+        '
+        Me.barDockControlRight.CausesValidation = False
+        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
+        Me.barDockControlRight.Location = New System.Drawing.Point(1158, 0)
+        Me.barDockControlRight.Manager = Me.BarManager1
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 572)
+        '
+        'pu_btn_Editar
+        '
+        Me.pu_btn_Editar.Caption = "Editar"
+        Me.pu_btn_Editar.Id = 0
+        Me.pu_btn_Editar.ImageOptions.ImageUri.Uri = "Edit;Size16x16;Colored"
+        Me.pu_btn_Editar.Name = "pu_btn_Editar"
+        '
+        'pu_btn_Eliminar
+        '
+        Me.pu_btn_Eliminar.Caption = "Eliminar"
+        Me.pu_btn_Eliminar.Id = 1
+        Me.pu_btn_Eliminar.ImageOptions.ImageUri.Uri = "Delete;Size16x16"
+        Me.pu_btn_Eliminar.Name = "pu_btn_Eliminar"
+        '
+        'pu_btn_Tipo
+        '
+        Me.pu_btn_Tipo.Caption = "Tipo de Habitación"
+        Me.pu_btn_Tipo.Id = 10
+        Me.pu_btn_Tipo.ImageOptions.ImageUri.Uri = "ListBullets;Size16x16"
+        Me.pu_btn_Tipo.Name = "pu_btn_Tipo"
+        '
+        'pu_btn_Precio
+        '
+        Me.pu_btn_Precio.Caption = "Precio"
+        Me.pu_btn_Precio.Id = 11
+        Me.pu_btn_Precio.ImageOptions.ImageUri.Uri = "Currency;Size16x16"
+        Me.pu_btn_Precio.Name = "pu_btn_Precio"
+        '
+        'pu_btn_Estado
+        '
+        Me.pu_btn_Estado.Caption = "Estado"
+        Me.pu_btn_Estado.Id = 12
+        Me.pu_btn_Estado.ImageOptions.ImageUri.Uri = "Apply;Size16x16"
+        Me.pu_btn_Estado.Name = "pu_btn_Estado"
+        '
+        'pu_btn_Piso
+        '
+        Me.pu_btn_Piso.Caption = "Piso"
+        Me.pu_btn_Piso.Id = 13
+        Me.pu_btn_Piso.ImageOptions.ImageUri.Uri = "ListNumbers;Size16x16"
+        Me.pu_btn_Piso.Name = "pu_btn_Piso"
+        '
+        'pu_btn_Numero
+        '
+        Me.pu_btn_Numero.Caption = "No. Habitación"
+        Me.pu_btn_Numero.Id = 14
+        Me.pu_btn_Numero.ImageOptions.ImageUri.Uri = "Today;Size16x16"
+        Me.pu_btn_Numero.Name = "pu_btn_Numero"
+        '
         'GroupControl1
         '
         Me.GroupControl1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.GroupControl1.Appearance.BackColor = System.Drawing.SystemColors.Control
         Me.GroupControl1.Appearance.Options.UseBackColor = True
+        Me.GroupControl1.Controls.Add(Me.MemoExEdit1)
+        Me.GroupControl1.Controls.Add(Me.LabelControl12)
         Me.GroupControl1.Controls.Add(Me.txtTrabajador)
         Me.GroupControl1.Controls.Add(Me.txtCliente)
         Me.GroupControl1.Controls.Add(Me.txtNoHabitacion)
@@ -319,6 +509,23 @@ Partial Class frmReserva
         Me.GroupControl1.Size = New System.Drawing.Size(448, 513)
         Me.GroupControl1.TabIndex = 9
         Me.GroupControl1.Text = "Registro de Reservas"
+        '
+        'MemoExEdit1
+        '
+        Me.MemoExEdit1.Location = New System.Drawing.Point(108, 382)
+        Me.MemoExEdit1.MenuManager = Me.BarManager1
+        Me.MemoExEdit1.Name = "MemoExEdit1"
+        Me.MemoExEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.MemoExEdit1.Size = New System.Drawing.Size(291, 20)
+        Me.MemoExEdit1.TabIndex = 36
+        '
+        'LabelControl12
+        '
+        Me.LabelControl12.Location = New System.Drawing.Point(39, 382)
+        Me.LabelControl12.Name = "LabelControl12"
+        Me.LabelControl12.Size = New System.Drawing.Size(64, 13)
+        Me.LabelControl12.TabIndex = 35
+        Me.LabelControl12.Text = "Observación:"
         '
         'txtTrabajador
         '
@@ -438,10 +645,12 @@ Partial Class frmReserva
         '
         'txtIDTrabajador
         '
+        Me.txtIDTrabajador.Enabled = False
         Me.txtIDTrabajador.Location = New System.Drawing.Point(108, 102)
         Me.txtIDTrabajador.Name = "txtIDTrabajador"
         Me.txtIDTrabajador.Size = New System.Drawing.Size(52, 20)
         Me.txtIDTrabajador.TabIndex = 5
+        Me.txtIDTrabajador.Visible = False
         '
         'LabelControl3
         '
@@ -453,10 +662,12 @@ Partial Class frmReserva
         '
         'txtIdCliente
         '
+        Me.txtIdCliente.Enabled = False
         Me.txtIdCliente.Location = New System.Drawing.Point(108, 76)
         Me.txtIdCliente.Name = "txtIdCliente"
         Me.txtIdCliente.Size = New System.Drawing.Size(52, 20)
         Me.txtIdCliente.TabIndex = 3
+        Me.txtIdCliente.Visible = False
         '
         'LabelControl9
         '
@@ -548,10 +759,12 @@ Partial Class frmReserva
         '
         'txtIDHabitacion
         '
+        Me.txtIDHabitacion.Enabled = False
         Me.txtIDHabitacion.Location = New System.Drawing.Point(108, 48)
         Me.txtIDHabitacion.Name = "txtIDHabitacion"
         Me.txtIDHabitacion.Size = New System.Drawing.Size(52, 20)
         Me.txtIDHabitacion.TabIndex = 1
+        Me.txtIDHabitacion.Visible = False
         '
         'txtIdReserva
         '
@@ -595,117 +808,6 @@ Partial Class frmReserva
         Me.puMenu_gridReservas.Manager = Me.BarManager1
         Me.puMenu_gridReservas.Name = "puMenu_gridReservas"
         '
-        'pu_btn_Editar
-        '
-        Me.pu_btn_Editar.Caption = "Editar"
-        Me.pu_btn_Editar.Id = 0
-        Me.pu_btn_Editar.ImageOptions.ImageUri.Uri = "Edit;Size16x16;Colored"
-        Me.pu_btn_Editar.Name = "pu_btn_Editar"
-        '
-        'pu_btn_Eliminar
-        '
-        Me.pu_btn_Eliminar.Caption = "Eliminar"
-        Me.pu_btn_Eliminar.Id = 1
-        Me.pu_btn_Eliminar.ImageOptions.ImageUri.Uri = "Delete;Size16x16"
-        Me.pu_btn_Eliminar.Name = "pu_btn_Eliminar"
-        '
-        'BarManager1
-        '
-        Me.BarManager1.DockControls.Add(Me.barDockControlTop)
-        Me.BarManager1.DockControls.Add(Me.barDockControlBottom)
-        Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
-        Me.BarManager1.DockControls.Add(Me.barDockControlRight)
-        Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.pu_btn_Editar, Me.pu_btn_Eliminar, Me.pu_btn_Nom, Me.pu_btn_Desc, Me.pu_btn_Tipo, Me.pu_btn_Precio, Me.pu_btn_Estado, Me.pu_btn_Piso, Me.pu_btn_Numero})
-        Me.BarManager1.MaxItemId = 15
-        '
-        'barDockControlTop
-        '
-        Me.barDockControlTop.CausesValidation = False
-        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(1158, 0)
-        '
-        'barDockControlBottom
-        '
-        Me.barDockControlBottom.CausesValidation = False
-        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 572)
-        Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1158, 0)
-        '
-        'barDockControlLeft
-        '
-        Me.barDockControlLeft.CausesValidation = False
-        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 572)
-        '
-        'barDockControlRight
-        '
-        Me.barDockControlRight.CausesValidation = False
-        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1158, 0)
-        Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 572)
-        '
-        'pu_btn_Nom
-        '
-        Me.pu_btn_Nom.Caption = "Nombre"
-        Me.pu_btn_Nom.Id = 8
-        Me.pu_btn_Nom.ImageOptions.ImageUri.Uri = "AlignHorizontalTop;Size16x16"
-        Me.pu_btn_Nom.Name = "pu_btn_Nom"
-        '
-        'pu_btn_Desc
-        '
-        Me.pu_btn_Desc.Caption = "Descripción"
-        Me.pu_btn_Desc.Id = 9
-        Me.pu_btn_Desc.ImageOptions.ImageUri.Uri = "Columns;Size16x16"
-        Me.pu_btn_Desc.Name = "pu_btn_Desc"
-        '
-        'pu_btn_Tipo
-        '
-        Me.pu_btn_Tipo.Caption = "Tipo de Habitación"
-        Me.pu_btn_Tipo.Id = 10
-        Me.pu_btn_Tipo.ImageOptions.ImageUri.Uri = "ListBullets;Size16x16"
-        Me.pu_btn_Tipo.Name = "pu_btn_Tipo"
-        '
-        'pu_btn_Precio
-        '
-        Me.pu_btn_Precio.Caption = "Precio"
-        Me.pu_btn_Precio.Id = 11
-        Me.pu_btn_Precio.ImageOptions.ImageUri.Uri = "Currency;Size16x16"
-        Me.pu_btn_Precio.Name = "pu_btn_Precio"
-        '
-        'pu_btn_Estado
-        '
-        Me.pu_btn_Estado.Caption = "Estado"
-        Me.pu_btn_Estado.Id = 12
-        Me.pu_btn_Estado.ImageOptions.ImageUri.Uri = "Apply;Size16x16"
-        Me.pu_btn_Estado.Name = "pu_btn_Estado"
-        '
-        'pu_btn_Piso
-        '
-        Me.pu_btn_Piso.Caption = "Piso"
-        Me.pu_btn_Piso.Id = 13
-        Me.pu_btn_Piso.ImageOptions.ImageUri.Uri = "ListNumbers;Size16x16"
-        Me.pu_btn_Piso.Name = "pu_btn_Piso"
-        '
-        'pu_btn_Numero
-        '
-        Me.pu_btn_Numero.Caption = "No. Habitación"
-        Me.pu_btn_Numero.Id = 14
-        Me.pu_btn_Numero.ImageOptions.ImageUri.Uri = "Today;Size16x16"
-        Me.pu_btn_Numero.Name = "pu_btn_Numero"
-        '
-        'puMenu_btnDropDown_Filtro
-        '
-        Me.puMenu_btnDropDown_Filtro.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Nom), New DevExpress.XtraBars.LinkPersistInfo(Me.pu_btn_Desc)})
-        Me.puMenu_btnDropDown_Filtro.Manager = Me.BarManager1
-        Me.puMenu_btnDropDown_Filtro.Name = "puMenu_btnDropDown_Filtro"
-        '
         'frmReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -726,9 +828,12 @@ Partial Class frmReserva
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GridView1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtBuscar.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.puMenu_btnDropDown_Filtro, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupControl1.ResumeLayout(False)
         Me.GroupControl1.PerformLayout()
+        CType(Me.MemoExEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTrabajador.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCliente.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNoHabitacion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -749,8 +854,6 @@ Partial Class frmReserva
         CType(Me.SeparatorControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.puMenu_gridReservas, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.BarManager1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.puMenu_btnDropDown_Filtro, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -817,4 +920,15 @@ Partial Class frmReserva
     Friend WithEvents pu_btn_Piso As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents pu_btn_Numero As DevExpress.XtraBars.BarButtonItem
     Friend WithEvents puMenu_btnDropDown_Filtro As DevExpress.XtraBars.PopupMenu
+    Friend WithEvents idTrabajador As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents nombreTrabajador As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents tipoReserva As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents fechaReserva As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents fechaIngreso As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents fechaSalida As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents costoAlojamiento As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents observacion As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents estado As DevExpress.XtraGrid.Columns.GridColumn
+    Friend WithEvents MemoExEdit1 As DevExpress.XtraEditors.MemoExEdit
+    Friend WithEvents LabelControl12 As DevExpress.XtraEditors.LabelControl
 End Class

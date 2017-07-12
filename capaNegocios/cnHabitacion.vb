@@ -6,6 +6,10 @@ Public Class cnHabitacion
         Dim obj As New cdHabitacion
         Return obj.BD_listarHabitaciones
     End Function
+    Public Function RN_listarHabitacionesDisponibles() As DataTable
+        Dim obj As New cdHabitacion
+        Return obj.BD_listarHabitacionesDisponibles
+    End Function
     Public Function RN_nextID_Habitacion() As String
         Dim obj As New cdHabitacion
         Return obj.BD_nextID_Habitacion

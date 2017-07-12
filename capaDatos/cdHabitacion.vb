@@ -18,6 +18,23 @@ Public Class cdHabitacion
             Return Nothing
         End Try
     End Function
+    Public Function BD_listarHabitacionesDisponibles() As DataTable
+        Dim cn As New SqlConnection
+        Try
+            cn.ConnectionString = cadenaConexion()
+            Dim da As New SqlDataAdapter("sp_Listar_ReservacionesDisponibles", cn)
+            da.SelectCommand.CommandType = CommandType.StoredProcedure
+            Dim datos As New DataTable
+            da.Fill(datos)
+            da = Nothing
+            Return datos
+        Catch ex As Exception
+            MsgBox("Error>>> " + ex.Message, MsgBoxStyle.Critical, "Informe de Error")
+            If cn.State = ConnectionState.Open Then cn.Close()
+            cn.Dispose()
+            Return Nothing
+        End Try
+    End Function
     Public Function BD_nextID_Habitacion() As String
         Dim cn As New SqlConnection
         Try

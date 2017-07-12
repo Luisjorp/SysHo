@@ -34,54 +34,104 @@ Public Class frmReserva
         Dim obj As New cnReserva
         Dim enRev As New ceReservacion
 
-        'enProd.nombre = txtNombreProducto.Text
-        'enProd.descripcion = txtDescripcionProducto.Text
-        'enProd.unidadMedida = cboxUnidadMedida.Text
-        'enProd.precioVenta = txtPrecioVenta.Text
+        enRev.idHabitacion = txtIDHabitacion.Text
+        enRev.idCliente = txtIdCliente.Text
+        enRev.idTrabajador = txtIDTrabajador.Text
+        enRev.tipoReserva = cboxTipoReserva.Text
+        enRev.fechaReserva = dateFechaReserva.EditValue
+        enRev.fechaIngreso = dateFechaIngreso.EditValue
+        enRev.fechaSalida = dateFechaSalida.EditValue
+        enRev.costoAlojamiento = txtCosto.Text
+        enRev.estado = cboxEstadoReserva.Text
 
         obj.RN_ingresarReserva(enRev)
     End Sub
     Public Sub actualizar_Reserva()
-        Dim obj As New cnProducto
-        Dim enProd As New ceProducto
+        Dim obj As New cnReserva
+        Dim enRev As New ceReservacion
 
-        'enProd.idProducto = txtIdProducto.Text
-        'enProd.nombre = txtNombreProducto.Text
-        'enProd.descripcion = txtDescripcionProducto.Text
-        'enProd.unidadMedida = cboxUnidadMedida.Text
-        'enProd.precioVenta = txtPrecioVenta.Text
+        enRev.idHabitacion = txtIDHabitacion.Text
+        enRev.idCliente = txtIdCliente.Text
+        enRev.idTrabajador = txtIDTrabajador.Text
+        enRev.tipoReserva = cboxTipoReserva.Text
+        enRev.fechaReserva = dateFechaReserva.EditValue
+        enRev.fechaIngreso = dateFechaIngreso.EditValue
+        enRev.fechaSalida = dateFechaSalida.EditValue
+        enRev.costoAlojamiento = txtCosto.Text
+        enRev.estado = cboxEstadoReserva.Text
 
-        'obj.RN_actualizarProducto(enProd)
+
     End Sub
 
     '*************************************FUNCIONES Y METODOS DEL FORMULARIO******************
     Private Sub inhabilitarCampos()
 
+        txtIdReserva.Enabled = False
+        txtIDHabitacion.Enabled = False
+        txtNoHabitacion.Enabled = False
+        txtIdCliente.Enabled = False
+        txtCliente.Enabled = False
+        txtIDTrabajador.Enabled = False
+        txtTrabajador.Enabled = False
+        cboxTipoReserva.Enabled = False
+        dateFechaReserva.Enabled = False
+        dateFechaIngreso.Enabled = False
+        dateFechaSalida.Enabled = False
+        txtCosto.Enabled = False
+        cboxEstadoReserva.Enabled = False
 
         btnGuardar.Enabled = False
         btnCancelar.Enabled = False
 
-        'txtIdProducto.Text = ""
-        'txtNombreProducto.Text = ""
-        'txtDescripcionProducto.Text = ""
-        'cboxUnidadMedida.Text = ""
-        'txtPrecioVenta.Text = ""
+        txtIdReserva.Text = ""
+        txtIDHabitacion.Text = ""
+        txtNoHabitacion.Text = ""
+        txtIdCliente.Text = ""
+        txtCliente.Text = ""
+        txtIDTrabajador.Text = ""
+        txtTrabajador.Text = ""
+        cboxTipoReserva.Text = ""
+        dateFechaReserva.Text = ""
+        dateFechaIngreso.Text = ""
+        dateFechaSalida.Text = ""
+        txtCosto.Text = ""
+        cboxEstadoReserva.Text = ""
+
+
+
+
     End Sub
     Private Sub habilitarCampos()
-        'txtIdProducto.Enabled = True
-        'txtNombreProducto.Enabled = True
-        'txtDescripcionProducto.Enabled = True
-        'cboxUnidadMedida.Enabled = True
-        'txtPrecioVenta.Enabled = True
+        txtIdReserva.Enabled = True
+        txtIDHabitacion.Enabled = True
+        txtNoHabitacion.Enabled = True
+        txtIdCliente.Enabled = True
+        txtCliente.Enabled = True
+        txtIDTrabajador.Enabled = True
+        txtTrabajador.Enabled = True
+        cboxTipoReserva.Enabled = True
+        dateFechaReserva.Enabled = True
+        dateFechaIngreso.Enabled = True
+        dateFechaSalida.Enabled = True
+        txtCosto.Enabled = True
+        cboxEstadoReserva.Enabled = True
 
         btnGuardar.Enabled = True
         btnCancelar.Enabled = True
 
-        'txtIdProducto.Text = ""
-        'txtNombreProducto.Text = ""
-        'txtDescripcionProducto.Text = ""
-        'cboxUnidadMedida.Text = ""
-        'txtPrecioVenta.Text = ""
+        txtIdReserva.Text = ""
+        txtIDHabitacion.Text = ""
+        txtNoHabitacion.Text = ""
+        txtIdCliente.Text = ""
+        txtCliente.Text = ""
+        txtIDTrabajador.Text = ""
+        txtTrabajador.Text = ""
+        cboxTipoReserva.Text = ""
+        dateFechaReserva.Text = ""
+        dateFechaIngreso.Text = ""
+        dateFechaSalida.Text = ""
+        txtCosto.Text = ""
+        cboxEstadoReserva.Text = ""
     End Sub
     Private Sub habilitarCamposEdicion()
         'txtIdProducto.Enabled = True
@@ -112,10 +162,10 @@ Public Class frmReserva
                 GridView1.SelectRow(e.RowHandle)
                 grid_index = e.RowHandle
                 If grid_index >= 0 Then
-                    '           puMenu_gridProductos.ShowPopup(e.Location, GridView1)
-                    '          puMenu_gridProductos.ShowPopup(Cursor.Position)
-                    pu_btn_Editar.Caption = "Editar información del producto: " + GridView1.GetRowCellValue(grid_index, "nombre").ToString
-                    pu_btn_Eliminar.Caption = "Eliminar registro del producto: " + GridView1.GetRowCellValue(grid_index, "nombre").ToString
+                    puMenu_gridReservas.ShowPopup(e.Location, GridView1)
+                    puMenu_gridReservas.ShowPopup(Cursor.Position)
+                    pu_btn_Editar.Caption = "Editar información de la reservación "
+                    pu_btn_Eliminar.Caption = "Eliminar registro de la reservación "
                 End If
             Catch ex As Exception
 
@@ -126,20 +176,84 @@ Public Class frmReserva
     'Grupo Registro
     Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
         habilitarCampos()
-        'cargar_IDProducto()
+        cargar_IDReserva()
         btnNuevo.Enabled = False
         btnGuardar.Text = "Guardar"
         accion = "guardar"
-        'txtNombreProducto.Focus()
+        txtNoHabitacion.Focus()
 
     End Sub
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
+        If txtIDHabitacion.Text = "" Or txtNoHabitacion.Text = "" Then
+            MsgBox("Debes seleccionar una habitación", MsgBoxStyle.Exclamation, "¡Falta la habitación!")
+            txtNoHabitacion.Focus()
+        Else
+            If txtIdCliente.Text = "" Or txtCliente.Text = "" Then
+                MsgBox("Debes seleccionar un cliente", MsgBoxStyle.Exclamation, "¡Falta el cliente!")
+                txtCliente.Focus()
+            Else
+                If txtCosto.Text = "" Or txtCosto.Text = "0.00" Then
+                    MsgBox("Debes ingresar ", MsgBoxStyle.Exclamation, "¡Falta la unidad de medida del producto!")
+                    txtCosto.Focus()
+                Else
+                    If cboxTipoReserva.Text = "" Then
+                        MsgBox("Establece el tipo de reserva.", MsgBoxStyle.Exclamation, "¡Falta el tipo de reserva!")
+                        cboxTipoReserva.Focus()
+                    Else
+                        If dateFechaReserva.Text = "" Or dateFechaReserva.EditValue < DateTime.Today Then
+                            MsgBox("Establece una fecha valida para la reserva.", MsgBoxStyle.Exclamation, "¡Falta la fecha de reserva!")
+                            dateFechaReserva.Focus()
+                        Else
+                            If dateFechaIngreso.EditValue < DateTime.Today Or dateFechaIngreso.Text = "" Then
+                                MsgBox("Establece una fecha valida de ingreso.", MsgBoxStyle.Exclamation, "¡Falta la fecha de ingreso!")
+                                dateFechaIngreso.Focus()
+                            Else
+                                If dateFechaSalida.EditValue < DateTime.Today Or dateFechaSalida.Text = "" Then
+                                    MsgBox("Establece una fecha valida de salida.", MsgBoxStyle.Exclamation, "¡Falta la fecha de salida!")
+                                    dateFechaSalida.Focus()
+                                Else
+                                    If cboxEstadoReserva.Text = "" Then
+                                        MsgBox("Debes seleccionar un estado de reservación", MsgBoxStyle.Exclamation, "¡Falta el estado!")
+                                        cboxEstadoReserva.Focus()
+                                    Else
+                                        'CUANDO TODOS LOS CAMPOS ESTAN COMPLETOS
+                                        If accion = "guardar" Then
+                                            Call ingresar_Reserva()
+                                        ElseIf accion = "actualizar" Then
+                                            'Call actualizar_Producto()
+                                        End If
 
+                                        Call cargar_Reservas()
+                                        Dim idSeleccionFila As String = txtIdReserva.Text
+                                        Call inhabilitarCampos()
+                                        btnNuevo.Enabled = True
+
+                                        'En este apartado se selecciona la nueva fila, o bien ya sea la editada, para no perder el foco de la misma.
+                                        For i As Integer = 0 To GridView1.RowCount - 1
+                                            If GridView1.GetRowCellValue(i, "idReserva") = idSeleccionFila Then
+                                                GridView1.FocusedRowHandle = i
+                                            End If
+                                        Next
+                                    End If
+                                End If
+                            End If
+                        End If
+                    End If
+                End If
+            End If
+        End If
 
     End Sub
     Private Sub btnCancelar_Click(sender As Object, e As EventArgs) Handles btnCancelar.Click
         inhabilitarCampos()
         btnNuevo.Enabled = True
+    End Sub
+    Private Sub txtNoHabitacion_Properties_ButtonClick(sender As Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles txtNoHabitacion.Properties.ButtonClick
+        Dim SelectorDialog As New frmEmerHabitación
+        SelectorDialog.ShowDialog()
+        txtIDHabitacion.Text = SelectorDialog.RetornoIDHabitacion
+        txtNoHabitacion.Text = SelectorDialog.RetornoNoHabitacion
+        SelectorDialog = Nothing
     End Sub
 
     'Grupo Lista
@@ -189,10 +303,10 @@ Public Class frmReserva
         accion = "actualizar"
     End Sub
     Private Sub pu_btn_Eliminar_ItemClick(sender As Object, e As ItemClickEventArgs) Handles pu_btn_Eliminar.ItemClick
-        Dim result As Integer = MessageBox.Show(Me, "¿Realmente desea eliminar este producto del sistema?", "ESTÁ A PUNTO DE ELIMINAR UN REGISTRO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
+        Dim result As Integer = MessageBox.Show(Me, "¿Realmente desea anular esta reserva?", "ESTÁ A PUNTO DE ELIMINAR UN REGISTRO", MessageBoxButtons.YesNo, MessageBoxIcon.Warning)
         If result = DialogResult.Yes Then
 
-            Dim idSeleccionFila As String = (GridView1.GetRowCellValue(grid_index, "idProducto") + 1).ToString
+            Dim idSeleccionFila As String = (GridView1.GetRowCellValue(grid_index, "idReserva") + 1).ToString
             'Eliminar_Producto(GridView1.GetRowCellValue(grid_index, "idProducto").ToString)
 
             'Call cargar_Productos()
