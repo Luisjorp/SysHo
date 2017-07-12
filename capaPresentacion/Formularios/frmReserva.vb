@@ -1,5 +1,6 @@
 ﻿Imports capaEntidad
 Imports capaNegocios
+Imports capaDatos.modLogin
 Imports DevExpress.XtraBars
 Imports DevExpress.XtraGrid.Views.Grid
 Imports DevExpress.XtraSplashScreen
@@ -71,8 +72,6 @@ Public Class frmReserva
         txtNoHabitacion.Enabled = False
         txtIdCliente.Enabled = False
         txtCliente.Enabled = False
-        txtIDTrabajador.Enabled = False
-        txtTrabajador.Enabled = False
         cboxTipoReserva.Enabled = False
         dateFechaReserva.Enabled = False
         dateFechaIngreso.Enabled = False
@@ -107,8 +106,6 @@ Public Class frmReserva
         txtNoHabitacion.Enabled = True
         txtIdCliente.Enabled = True
         txtCliente.Enabled = True
-        txtIDTrabajador.Enabled = True
-        txtTrabajador.Enabled = True
         cboxTipoReserva.Enabled = True
         dateFechaReserva.Enabled = True
         dateFechaIngreso.Enabled = True
@@ -180,6 +177,8 @@ Public Class frmReserva
         btnNuevo.Enabled = False
         btnGuardar.Text = "Guardar"
         accion = "guardar"
+        txtIDTrabajador.Text = xIdPersona
+        txtTrabajador.Text = String.Format("{0} {1}", xNombre, xApellido)
         txtNoHabitacion.Focus()
 
     End Sub

@@ -61,7 +61,6 @@ Partial Class frmReserva
         Me.GroupControl1 = New DevExpress.XtraEditors.GroupControl()
         Me.MemoExEdit1 = New DevExpress.XtraEditors.MemoExEdit()
         Me.LabelControl12 = New DevExpress.XtraEditors.LabelControl()
-        Me.txtTrabajador = New DevExpress.XtraEditors.ButtonEdit()
         Me.txtCliente = New DevExpress.XtraEditors.ButtonEdit()
         Me.txtNoHabitacion = New DevExpress.XtraEditors.ButtonEdit()
         Me.cboxEstadoReserva = New DevExpress.XtraEditors.ComboBoxEdit()
@@ -93,6 +92,7 @@ Partial Class frmReserva
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.BehaviorManager1 = New DevExpress.Utils.Behaviors.BehaviorManager(Me.components)
         Me.puMenu_gridReservas = New DevExpress.XtraBars.PopupMenu(Me.components)
+        Me.txtTrabajador = New DevExpress.XtraEditors.TextEdit()
         CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl2.SuspendLayout()
         CType(Me.GridControl1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,7 +103,6 @@ Partial Class frmReserva
         CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupControl1.SuspendLayout()
         CType(Me.MemoExEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTrabajador.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCliente.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtNoHabitacion.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.cboxEstadoReserva.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -123,6 +122,7 @@ Partial Class frmReserva
         CType(Me.SeparatorControl1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.puMenu_gridReservas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtTrabajador.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SplashScreenManager1
@@ -476,7 +476,6 @@ Partial Class frmReserva
         Me.GroupControl1.Appearance.Options.UseBackColor = True
         Me.GroupControl1.Controls.Add(Me.MemoExEdit1)
         Me.GroupControl1.Controls.Add(Me.LabelControl12)
-        Me.GroupControl1.Controls.Add(Me.txtTrabajador)
         Me.GroupControl1.Controls.Add(Me.txtCliente)
         Me.GroupControl1.Controls.Add(Me.txtNoHabitacion)
         Me.GroupControl1.Controls.Add(Me.cboxEstadoReserva)
@@ -504,6 +503,7 @@ Partial Class frmReserva
         Me.GroupControl1.Controls.Add(Me.txtIDHabitacion)
         Me.GroupControl1.Controls.Add(Me.txtIdReserva)
         Me.GroupControl1.Controls.Add(Me.SeparatorControl1)
+        Me.GroupControl1.Controls.Add(Me.txtTrabajador)
         Me.GroupControl1.Location = New System.Drawing.Point(13, 47)
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.Size = New System.Drawing.Size(448, 513)
@@ -526,15 +526,6 @@ Partial Class frmReserva
         Me.LabelControl12.Size = New System.Drawing.Size(64, 13)
         Me.LabelControl12.TabIndex = 35
         Me.LabelControl12.Text = "Observación:"
-        '
-        'txtTrabajador
-        '
-        Me.txtTrabajador.Location = New System.Drawing.Point(167, 102)
-        Me.txtTrabajador.Name = "txtTrabajador"
-        Me.txtTrabajador.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton()})
-        Me.txtTrabajador.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
-        Me.txtTrabajador.Size = New System.Drawing.Size(109, 20)
-        Me.txtTrabajador.TabIndex = 6
         '
         'txtCliente
         '
@@ -808,6 +799,15 @@ Partial Class frmReserva
         Me.puMenu_gridReservas.Manager = Me.BarManager1
         Me.puMenu_gridReservas.Name = "puMenu_gridReservas"
         '
+        'txtTrabajador
+        '
+        Me.txtTrabajador.Enabled = False
+        Me.txtTrabajador.Location = New System.Drawing.Point(167, 102)
+        Me.txtTrabajador.Name = "txtTrabajador"
+        Me.txtTrabajador.Properties.LookAndFeel.SkinMaskColor = System.Drawing.Color.Aquamarine
+        Me.txtTrabajador.Size = New System.Drawing.Size(109, 20)
+        Me.txtTrabajador.TabIndex = 6
+        '
         'frmReserva
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -834,7 +834,6 @@ Partial Class frmReserva
         Me.GroupControl1.ResumeLayout(False)
         Me.GroupControl1.PerformLayout()
         CType(Me.MemoExEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTrabajador.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCliente.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtNoHabitacion.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.cboxEstadoReserva.Properties, System.ComponentModel.ISupportInitialize).EndInit()
@@ -854,6 +853,7 @@ Partial Class frmReserva
         CType(Me.SeparatorControl1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BehaviorManager1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.puMenu_gridReservas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtTrabajador.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -900,7 +900,6 @@ Partial Class frmReserva
     Friend WithEvents txtNoHabitacion As DevExpress.XtraEditors.ButtonEdit
     Friend WithEvents cboxEstadoReserva As DevExpress.XtraEditors.ComboBoxEdit
     Friend WithEvents LabelControl11 As DevExpress.XtraEditors.LabelControl
-    Friend WithEvents txtTrabajador As DevExpress.XtraEditors.ButtonEdit
     Friend WithEvents txtCliente As DevExpress.XtraEditors.ButtonEdit
     Friend WithEvents Timer1 As Timer
     Friend WithEvents BehaviorManager1 As DevExpress.Utils.Behaviors.BehaviorManager
@@ -931,4 +930,5 @@ Partial Class frmReserva
     Friend WithEvents estado As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents MemoExEdit1 As DevExpress.XtraEditors.MemoExEdit
     Friend WithEvents LabelControl12 As DevExpress.XtraEditors.LabelControl
+    Friend WithEvents txtTrabajador As DevExpress.XtraEditors.TextEdit
 End Class
