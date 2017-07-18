@@ -1,7 +1,7 @@
 ﻿Imports capaEntidad
 Imports capaNegocios
 Imports DevExpress.XtraBars
-Imports DevExpress.XtraBarss
+
 
 Public Class frmEmerHabitación
     '**************************************VARIABLES INICIALES**************************************

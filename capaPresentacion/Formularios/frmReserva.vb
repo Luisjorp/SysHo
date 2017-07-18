@@ -192,7 +192,7 @@ Public Class frmReserva
                 txtCliente.Focus()
             Else
                 If txtCosto.Text = "" Or txtCosto.Text = "0.00" Then
-                    MsgBox("Debes ingresar ", MsgBoxStyle.Exclamation, "¡Falta la unidad de medida del producto!")
+                    MsgBox("Debes ingresar un costo ", MsgBoxStyle.Exclamation, "¡Falta ingresar el costo!")
                     txtCosto.Focus()
                 Else
                     If cboxTipoReserva.Text = "" Then
@@ -247,7 +247,7 @@ Public Class frmReserva
         inhabilitarCampos()
         btnNuevo.Enabled = True
     End Sub
-    Private Sub txtNoHabitacion_Properties_ButtonClick(sender As Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles txtNoHabitacion.Properties.ButtonClick
+    Private Sub txtNoHabitacion_Properties_ButtonClick(sender As Object, e As DevExpress.XtraEditors.Controls.ButtonPressedEventArgs) Handles txtNoHabitacion.Properties.ButtonClick, ButtonEdit1.Properties.ButtonClick
         Dim SelectorDialog As New frmEmerHabitación
         SelectorDialog.ShowDialog()
         txtIDHabitacion.Text = SelectorDialog.RetornoIDHabitacion
@@ -334,5 +334,6 @@ Public Class frmReserva
     Private Sub btnDD_Filtro_TextChanged(sender As Object, e As EventArgs) Handles btnDD_Filtro.TextChanged
         txtBuscar.Focus()
     End Sub
+
 
 End Class
